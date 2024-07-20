@@ -1,0 +1,82 @@
+
+
+ /*-----------------------------General styling-----------------------------------*/
+
+ body {
+  margin: 0px;
+}
+.bg-img {
+  background: url("../images/hulk-bg-image1.png");
+  background-size: cover;
+  width:100%;
+  height:100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ /*-----------------------------Header-----------------------------------*/
+
+header {
+  display: flex;
+  flex-direction: column;
+  color: white;
+ }
+
+h1 {
+ margin-top: 30px;
+ margin-bottom: 0px;
+ font-size: 15vw;
+}
+
+h2 {
+ margin: 0;
+ font-size: 10vw;
+}
+
+ /*-----------------------------MainContainer styling-----------------------------------*/
+
+
+.main-container {
+  width: 80%;
+  height: 70vh;
+  margin: 10%;
+  color: #faf6f6ce;
+  text-align: center;
+  border:solid;
+  border-color: white;
+  border-radius: 10%;
+  background-color: rgb(0 0 0 / 69%);
+}
+
+/*-----------------------------Footer styling-----------------------------------*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  font-size: 3vw;
+  color: white;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons li {
+  display: inline;
+  margin: 5px 0; /
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  text-decoration: underline;
+}
