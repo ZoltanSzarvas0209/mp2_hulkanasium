@@ -12,8 +12,47 @@
         <h1>Hulkanasium</h1>
         <h2>Fitness App</h2>
     </header>
-
+    
+    <!-- Main section of the application containing the quiz, calorie calculator and the get my plan function -->
     <section class="main-container center">
+
+        <!-- Quiz welcome container -->
+        <div class="quiz-container-start">
+            <h3 class="quiz-header">What Is My Body Type Quiz</h3>
+            <p> Answer the questions and find out your body type!</p>
+            <button class="btn">START QUIZ</button>
+        </div>
+        <!-- Quiz container to display all questions -->
+        <div class="quiz-questions-container hidden"></div>
+        <!-- Quiz container to display the result of the quiz -->
+        <div class="quiz-result-container"></div>
+
+
+        <!-- Calorie calculator section  container -->
+        <div class="calorie-calculator-container">
+            <h3 class="quiz-header">What're My Nutritional Needs?</h3>
+            <p> Enter your weight, height and activity level to calculate your daily calorie needs.</p>
+            <div class="calorie-input">
+                <input id="weight-input" type="text" placeholder="Enter your weight in Kilograms">
+                <input id="height-input" type="text" placeholder="Enter your height in cm">
+                <select id="activity-level" placeholder="select your activity level">
+                    <option value="low">LOW</option>
+                    <option value="moderate">MODERATE</option>
+                    <option value="high">HIGH</option>
+                </select>
+            </div>
+            <button class="btn">CALCULATE</button>
+        </div>
+        <!-- Container to display the result od the calorie calculator -->
+        <div class="calorie-result-container hidden"></div>
+
+
+        <!--Get my plan section container -->
+        <div class="getmyplan-container">
+            <h3 class="quiz-header">Get My Plan</h3>
+            <p> Complete the Activities above and get your personalised workout plan</p>
+            <button class="btn">GET MY PLAN</button>
+        </div>
 
     </section>
 
