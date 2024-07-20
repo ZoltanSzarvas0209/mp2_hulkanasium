@@ -2,9 +2,9 @@
 
 Hi there, 
 
-Hulkanasium is a fictional gym webpage created as the second Milestone Project for my studies with CodeInstitute. 
+Hulkanasium is a fictional fitness app created as the second Milestone Project for my studies with CodeInstitute. 
 
-The idea of the site similarly to my first project is based on real life experience. The name Hulkanasium is fictional name my collegues and I come up with for a basement gym we had at a Hotel we all worked together in. The gym had a large Hulk picture in the middle that inspired the name. The second project of the web applications course requires the implementation of JavaSript along with html and css as it was in the previous project. To fulfill the requirement I decided to bring Hulkanasium alive and design a website for it, where on top of the usual features of a gym site , I plan to add features for map search and calorie calculator for fitness.
+The idea of the site similarly to my first project is based on real life experience. The name Hulkanasium is fictional name my collegues and I come up with for a basement gym we had at a Hotel we all worked together in. The gym had a large Hulk picture in the middle that inspired the name. The second project of the web applications course requires the implementation of JavaSript along with html and css as it was in the previous project. To fulfill the requirement I decided to bring Hulkanasium alive and design a fitness application for it, where users can complete a quiz to find out their body type along with a calorie calculator and a form field to get a workout plan based on their results.
 
 ## **[ Hulkanasium Live Site ] (insert lin here)**
 
@@ -48,10 +48,6 @@ The choosen project is a fictional gym webpage that mimics all features of an or
     * CSS
     * JavaScript
 
-* Framework
-
-    * Bootstrap
-
 * Version Control
 
     * Git
@@ -66,7 +62,7 @@ The choosen project is a fictional gym webpage that mimics all features of an or
 
 ### Objective <a name="objective"></a>
 
-    * The objectives of the website is to establish an online presence , promote the webpage/gym to gain customers , showcase equipment and advertise classes and provide features that sets it aside from competition.
+    * The objectives of the app is to promote health lifestyle and advertise the fictional gym Hulkanasium.
 
 ### Research <a name="research"></a>
 
@@ -86,6 +82,10 @@ Websites visited for research:
 * User story 2:
 
 ### Structure and Design <a name="design"></a>
+
+* Color Palette:   <img src="assets/images/color-palette.png">
+
+The above color palette where generated using https://coolors.co/ free color generator and the background image of the application. I'va added a generic white color to use for text to provide a strong contrast with the scheme.
 
 ### Deployment <a name="deployment"></a>
 
