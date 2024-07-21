@@ -29,7 +29,7 @@
 
 
         <!-- Calorie calculator section  container -->
-        <div class="calorie-calculator-container">
+        <div class="calorie-calculator-container" id="calorie-default">
             <h3 class="quiz-header">What're My Nutritional Needs?</h3>
             <p> Enter your weight, height and activity level to calculate your daily calorie needs.</p>
             <div class="calorie-input">
@@ -49,7 +49,10 @@
             <button class="btn" id="calculate-btn">CALCULATE</button>
         </div>
         <!-- Container to display the result od the calorie calculator -->
-        <div class="calorie-result-container hidden"></div>
+        <div class="calorie-result-container hidden" id="calorie-result">
+            <p>Your daily calorie needs to maintain your current body weight is:</p>
+            <span id="calorie-value"></span>
+        </div>
 
 
         <!--Get my plan section container -->

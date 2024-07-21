@@ -30,10 +30,24 @@ document.addEventListener("DOMContentLoaded", function() {
             calorieNeeds = bmr * 1.9;
         }
 
+        // round down to the nearest integer
+
+        calorieNeeds = Math.floor(calorieNeeds);
+
+        // make result div replace the calculator displaying the current result
+
+        document.getElementById('calorie-value').innerHTML = calorieNeeds;
+
+        var hideDiv = document.getElementById('calorie-default');
+        hideDiv.style.display = "none";
+
+        var resultDiv = document.getElementById('calorie-result');
+        resultDiv.style.display = "block";
+
+        console.log(calorieNeeds);
+
     });
 
 });
-
-const heightInMeter = height/100;
 
 
