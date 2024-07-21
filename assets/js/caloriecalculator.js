@@ -1,0 +1,39 @@
+
+document.addEventListener("DOMContentLoaded", function() {
+    const calculateButton = document.getElementById('calculate-btn');
+
+    calculateButton.addEventListener("click", function() {
+
+        const gender = document.getElementById('gender').value;
+        const weight = parseFloat(document.getElementById('weight-input').value);
+        const height = parseFloat(document.getElementById('height-input').value);
+        const age = parseFloat(document.getElementById('age-input').value);
+        const activity = document.getElementById('activity-level').value;
+
+        let bmr;
+        let calorieNeeds;
+
+        //Harris-Benedict Equation is used to Calculate BMR, chatGPT was used to come up with the equation and helped with the code structure.
+        if (gender === 'male') {
+            bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age); 
+        } else {
+            bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+        }
+
+        // Adjust BMR for activity levels
+
+        if (activity === 'low') {
+            calorieNeeds = bmr * 1.2;
+        } else if (activity === 'moderate') {
+            calorieNeeds = bmr * 1.55;
+        } else {
+            calorieNeeds = bmr * 1.9;
+        }
+
+    });
+
+});
+
+const heightInMeter = height/100;
+
+
