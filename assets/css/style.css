@@ -101,6 +101,56 @@ h2 {
   height: 30%;
 }
 
+/*-----------------------------Popup form styling-----------------------------------*/
+
+.form-container {
+  position: fixed;
+  height: 90vh;
+  width: 90vw;
+  top: 5%;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 90vh;
+  background-color: rgb(54,52,33);
+  border-radius: 10px;
+  padding-top: 20%;
+}
+
+#form label {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#form .form-input,
+#form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#form .submit-btn {
+  padding: 10px;
+  margin-top: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(138,130,110);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#form .submit-btn:hover {
+  background-color: rgb(179,155,106);
+}
+
+
 /*-----------------------------Footer styling-----------------------------------*/
 
 footer {

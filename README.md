@@ -56,6 +56,8 @@ The choosen project is a fictional gym webpage that mimics all features of an or
 
 
 * additional resources
+
+    * Coolors: https://coolors.co/ 
     * FontAwesome: https://fontawesome.com/search?o=r&m=free&s=solid  - 
     * ChatGPT: https://chat.openai.com/   - 
     * Google Fonts: https://fonts.google.com/selection/embed -
@@ -120,6 +122,13 @@ To Deploy a project from your github repesatory, follow the steps below.
 #### Accesibility <a name="access"></a>
 
 ## Media <a name="media"></a>
+
+* Pixabay: https://pixabay.com/images/search/webpage/
+
+- https://pixabay.com/illustrations/ai-generated-hulk-superhero-mcu-8095123/
+
+
+
 
 ## Credits <a name="credit"></a>
 

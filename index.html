@@ -59,8 +59,26 @@
         <div class="getmyplan-container">
             <h3 class="quiz-header">Get My Plan</h3>
             <p> Complete the Activities above and get your personalised workout plan</p>
-            <button class="btn">GET MY PLAN</button>
+            <button class="btn" id="getmyplan-btn">GET MY PLAN</button>
         </div>
+        <!-- Pop up form to fill in when user clciks GET MY PLAN Button-->
+        <div class="form-container hidden" id="form-container">
+            <form id="form">
+                <label for="fname">First Name</label>
+                <input id="fname" class="form-input" type="text" name="first_name" pattern="[A-Za-z\s]+" title="Type your first name here" required>
+    
+                <label for="lname">Last Name</label>
+                <input id="lname" class="form-input" type="text" name="last_name" pattern="[A-Za-z\s]+" title="Type your last name here" required>
+    
+                <label for="email">Email Address</label>
+                <input id="email" class="form-input" type="email" name="email_address" required>
+    
+                <label for="textarea">Additional Info</label>
+                <textarea id="textarea" name="textarea" placeholder="Let us know any diet and exercise preferences and whether at home or in a gym."></textarea>
+    
+                <input class="submit-btn" type="submit" value="Submit">
+            </form>
+    
 
     </section>
 
@@ -79,5 +97,7 @@
 
     <script src="https://kit.fontawesome.com/353f52eb70.js" crossorigin="anonymous"></script>
     <script src="assets/js/caloriecalculator.js"></script>
+    <script src="assets/js/getmyplan.js"></script>
+    <script src="assets/js/quiz.js"></script>
 </body>
 </html>
