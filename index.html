@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <title>Hulkanasium Fitness App</title>
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+             emailjs.init({
+             publicKey: "tur4zwzn6oQL_Fnxq",
+            });
+        })();
+</script>
 </head>
 <body class="bg-img">
 
@@ -63,21 +74,24 @@
         </div>
         <!-- Pop up form to fill in when user clciks GET MY PLAN Button-->
         <div class="form-container hidden" id="form-container">
-            <form id="form">
+            <form id="form" onsubmit="return sendMail(this);">
                 <label for="fname">First Name</label>
-                <input id="fname" class="form-input" type="text" name="first_name" pattern="[A-Za-z\s]+" title="Type your first name here" required>
+                <input id="fname" class="form-input" type="text" name="fname" pattern="[A-Za-z\s]+" title="Type your first name here" required>
     
                 <label for="lname">Last Name</label>
-                <input id="lname" class="form-input" type="text" name="last_name" pattern="[A-Za-z\s]+" title="Type your last name here" required>
+                <input id="lname" class="form-input" type="text" name="lname" pattern="[A-Za-z\s]+" title="Type your last name here" required>
     
                 <label for="email">Email Address</label>
-                <input id="email" class="form-input" type="email" name="email_address" required>
+                <input id="email" class="form-input" type="email" name="email" value="email" required>
     
                 <label for="textarea">Additional Info</label>
-                <textarea id="textarea" name="textarea" placeholder="Let us know any diet and exercise preferences and whether at home or in a gym."></textarea>
+                <textarea id="textarea" name="textarea" value="textarea" placeholder="Let us know any diet and exercise preferences and whether at home or in a gym."></textarea>
     
                 <input class="submit-btn" type="submit" value="Submit">
+
+                <button id="close-btn">CLOSE WINDOW</button>
             </form>
+        </div>
     
 
     </section>

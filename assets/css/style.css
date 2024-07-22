@@ -150,6 +150,17 @@ h2 {
   background-color: rgb(179,155,106);
 }
 
+#close-btn {
+  padding: 10px;
+  margin-top: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(138,130,110);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 
 /*-----------------------------Footer styling-----------------------------------*/
 
