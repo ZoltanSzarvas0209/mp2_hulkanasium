@@ -13,33 +13,33 @@ let userAnswers = [];
 const bodytypeQuiz = [
     {
         question: "How would you describe your natural body shape?",
-        choices: ["Naturally lean and have difficulty gaining weight.", 
-            "Naturally muscular and gain muscle easily.",
-             "Naturally soft and round, and gain weight easily."]
+        choices: { A: "Naturally lean and have difficulty gaining weight.", 
+            B: "Naturally muscular and gain muscle easily.",
+            C: "Naturally soft and round, and gain weight easily."}
     },
     {
         question: "How does your body respond to weight training?",
-        choices: [" I struggle to gain muscle mass.", 
-            " I gain muscle mass quickly and easily.",
-             "I gain some muscle but also tend to gain fat."]
+        choices: { A: " I struggle to gain muscle mass.", 
+            B: " I gain muscle mass quickly and easily.",
+            C: "I gain some muscle but also tend to gain fat."}
     },
     {
         question: "What is your metabolism like?",
-        choices: ["Very fast; I can eat a lot without gaining weight.",
-             "Moderate; I can maintain my weight with a balanced diet.",
-             "Slow; I gain weight easily and have to watch my diet closely."]
+        choices: { A: "Very fast; I can eat a lot without gaining weight.",
+            B: "Moderate; I can maintain my weight with a balanced diet.",
+            C: "Slow; I gain weight easily and have to watch my diet closely."}
     },
     {
         question: "How would you describe your body fat distribution?",
-        choices: ["Low body fat, with a tendency to look slim.",
-             "Balanced body fat, with a muscular appearance.",
-             "Higher body fat, with a tendency to store fat around the abdomen and thighs."]
+        choices: {A: "Low body fat, with a tendency to look slim.",
+            B: "Balanced body fat, with a muscular appearance.",
+            C: "Higher body fat, with a tendency to store fat around the abdomen and thighs."}
     },
     {
         question: "What is your energy level like throughout the day?",
-        choices: ["High energy levels and I stay active easily.",
-             "Steady energy levels and I feel strong throughout the day.",
-             " Variable energy levels and I often feel sluggish."]
+        choices: {A: "High energy levels and I stay active easily.",
+            B: "Steady energy levels and I feel strong throughout the day.",
+            C: " Variable energy levels and I often feel sluggish."}
     }
 ];
 
@@ -60,9 +60,9 @@ function displayQuestion(index) {
     quiz.innerHTML = 
     `<div class="question">${currentQuestion.question}</div>
     <div class="choices">
-        <button> ${currentQuestion.choices[0]}</button>
-        <button> ${currentQuestion.choices[1]}</button>
-        <button> ${currentQuestion.choices[2]}</button>
+        <button class="choice-btn" data-choice="A"> ${currentQuestion.choices.A}</button>
+        <button class="choice-btn" data-choice="B"> ${currentQuestion.choices.B}</button>
+        <button class="choice-btn" data-choice="C"> ${currentQuestion.choices.C}</button>
     </div>
     <div class="navigation">
         <button class="nav-btn hidden" id="prev-btn">Prev</button>
@@ -83,6 +83,8 @@ function displayQuestion(index) {
     // add event listeners and functionality to navigation buttons
     questionNav();
    
+    // event listeners to get userAnswer array populated with user selection.
+    handleAnswers();
 }
 
 
@@ -124,6 +126,27 @@ function questionNav() {
             displayQuestion(currentQuestionIndex);
         }
     });
+}
+
+function handleAnswers() {
+    // this code snippet was created with perplexity ai and it add event listeners to the choice-btns
+    document.querySelectorAll('.choice-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            userAnswers[currentQuestionIndex] = this.getAttribute('data-choice');
+            highlightSelectedChoice(this);
+        });
+    });
+}
+
+
+// this function captures the choice for each question and higlights it.
+function highlightSelectedChoice(selectedButton) {
+    // Remove highlight from all buttons
+    document.querySelectorAll('.choice-btn').forEach(btn => {
+        btn.classList.remove('selected');
+    });
+    // Add highlight to selected button
+    selectedButton.classList.add('selected');
 }
 
 function submitQuiz() {

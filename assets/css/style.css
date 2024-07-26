@@ -71,6 +71,8 @@ h2 {
   background-color: rgb(27 26 25 / 90%);
 }
 
+/*---------------------------Quiz section----------------------------*/
+
 .quiz-header {
   font-size: 2em;
   font-weight: 600;
@@ -81,6 +83,13 @@ h2 {
   width: 100%;
   height: 40%;
 }
+
+.selected {
+  background-color: rgba(0, 0, 0, 0.242);
+}
+
+/*---------------------------Calorie Calculator section----------------------------*/
+
 
 .calorie-calculator-container {
   width: 100%;
@@ -95,6 +104,9 @@ h2 {
   font-size: 32px;
   font-weight: 800;
 }
+
+/*---------------------------Get My Plan section----------------------------*/
+
 
 .getmyplan-container {
   width: 100%;
