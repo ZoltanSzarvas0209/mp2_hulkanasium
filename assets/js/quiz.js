@@ -63,7 +63,7 @@ function displayQuestion(index) {
         <button> ${currentQuestion.choices[2]}</button>
     </div>
     <div class="navigation">
-        <button class="nav-btn" id="prev-btn">Prev</button>
+        <button class="nav-btn hidden" id="prev-btn">Prev</button>
         <button class="nav-btn" id="next-btn">Next</button>
     </div>`
     /*
@@ -87,12 +87,20 @@ function displayQuestion(index) {
 function questionNav() {
     const next = document.getElementById('next-btn');
     const prev = document.getElementById('prev-btn');
+    const nav = document.querySelector(".nav-btn");
+
+    if (currentQuestionIndex > 0) {
+        nav.classList.remove('hidden');
+    };
 
     next.addEventListener("click", function() {
         if (currentQuestionIndex < bodytypeQuiz.length - 1) {
             currentQuestionIndex++;
             displayQuestion(currentQuestionIndex);
+        } else {
+            next.style.display = "none";
         }
+
     });
 
     prev.addEventListener("click", function() {
