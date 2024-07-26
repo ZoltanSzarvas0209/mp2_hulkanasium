@@ -2,13 +2,13 @@
 
 const startbutton = document.getElementById('start-quiz-btn'); // start quiz button to trigger quiz
 const quizWelcome = document.getElementById('quiz-welcome'); // initially displayed div in quiz section
-const quiz = document.getElementsByClassName('quiz-questions-container'); // initially hidden div to contain quiz
-const quizResult = document.getElementsByClassName('quiz-result-container'); // result div to display at the end of the quiz
+const quiz = document.querySelector('.quiz-questions-container'); // initially hidden div to contain quiz
+const quizResult = document.querySelector('.quiz-result-container'); // result div to display at the end of the quiz
 
 
 //initialise questions array, index to track questions and answers array 
 
-let currentQuestion = 0;
+let currentQuestionIndex = 0;
 let userAnswers = [];
 const bodytypeQuiz = [
     {
@@ -50,4 +50,55 @@ startbutton.addEventListener("click", startQuiz);
 function startQuiz() {
     quizWelcome.style.display = "none";
     quiz.style.display = "block";
+    displayQuestion(0);
+}
+
+function displayQuestion(index) {
+    const currentQuestion = bodytypeQuiz[index];
+    quiz.innerHTML = 
+    `<div class="question">${currentQuestion.question}</div>
+    <div class="choices">
+        <button> ${currentQuestion.choices[0]}</button>
+        <button> ${currentQuestion.choices[1]}</button>
+        <button> ${currentQuestion.choices[2]}</button>
+    </div>
+    <div class="navigation">
+        <button class="nav-btn" id="prev-btn">Prev</button>
+        <button class="nav-btn" id="next-btn">Next</button>
+    </div>`
+    /*
+    `
+    <div class="question">${currentQuestion.question}</div>
+
+    <div class="choices">
+        ${currentQuestion.choices.map((choice, i) => `
+            <button class="choice-btn" data-choice-index="${i}">${choice}</button>
+        `).join('')}
+    </div>
+    `
+    */
+
+    // add event listener to navigation buttons
+    questionNav();
+   
+}
+
+
+function questionNav() {
+    const next = document.getElementById('next-btn');
+    const prev = document.getElementById('prev-btn');
+
+    next.addEventListener("click", function() {
+        if (currentQuestionIndex < bodytypeQuiz.length - 1) {
+            currentQuestionIndex++;
+            displayQuestion(currentQuestionIndex);
+        }
+    });
+
+    prev.addEventListener("click", function() {
+        if (currentQuestionIndex > 0) {
+            currentQuestionIndex--;
+            displayQuestion(currentQuestionIndex);
+        }
+    });
 }
