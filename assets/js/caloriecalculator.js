@@ -44,8 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
         var resultDiv = document.getElementById('calorie-result');
         resultDiv.style.display = "block";
 
-        console.log(calorieNeeds);
-
     });
 
 });
