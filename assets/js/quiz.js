@@ -47,6 +47,8 @@ const bodytypeQuiz = [
 
 startbutton.addEventListener("click", startQuiz);
 
+// create all functions needed to implement full functionality
+
 function startQuiz() {
     quizWelcome.style.display = "none";
     quiz.style.display = "block";
@@ -78,7 +80,7 @@ function displayQuestion(index) {
     `
     */
 
-    // add event listener to navigation buttons
+    // add event listeners and functionality to navigation buttons
     questionNav();
    
 }
@@ -87,20 +89,33 @@ function displayQuestion(index) {
 function questionNav() {
     const next = document.getElementById('next-btn');
     const prev = document.getElementById('prev-btn');
-    const nav = document.querySelector(".nav-btn");
+    const nav = document.querySelector('.nav-btn');
 
+    //remove prev button when not needed
     if (currentQuestionIndex > 0) {
         nav.classList.remove('hidden');
     };
 
+    //remove next button when not needed
+    if (currentQuestionIndex === bodytypeQuiz.length -1) {
+        next.classList.add('hidden');
+    }
+
+    //add submit button at the end of quiz
+    if (currentQuestionIndex === bodytypeQuiz.length -1) {
+        const navDiv = document.querySelector('.navigation');
+        const submitButton = document.createElement('button');
+        submitButton.textContent = 'SUBMIT';
+        submitButton.id = 'submit-btn';
+        navDiv.appendChild(submitButton);
+    }
+
+    // event listeners fpr prev/next clicks and update currentQuestionIndex variable.
     next.addEventListener("click", function() {
         if (currentQuestionIndex < bodytypeQuiz.length - 1) {
             currentQuestionIndex++;
             displayQuestion(currentQuestionIndex);
-        } else {
-            next.style.display = "none";
         }
-
     });
 
     prev.addEventListener("click", function() {
@@ -109,4 +124,8 @@ function questionNav() {
             displayQuestion(currentQuestionIndex);
         }
     });
+}
+
+function submitQuiz() {
+
 }
