@@ -9,6 +9,7 @@ const quizResult = document.querySelector('.quiz-result-container'); // result d
 //initialise questions array, index to track questions and answers array 
 
 let currentQuestionIndex = 0;
+let isQuesstionAnswered = false;
 let userAnswers = [];
 const bodytypeQuiz = [
     {
@@ -66,7 +67,7 @@ function displayQuestion(index) {
     </div>
     <div class="navigation">
         <button class="nav-btn btn hidden" id="prev-btn">Prev</button>
-        <button class="nav-btn btn" id="next-btn">Next</button>
+        <button class="nav-btn btn selected" id="next-btn">Next</button>
     </div>`
     /*
     `
@@ -112,14 +113,14 @@ function questionNav() {
 
         // event listener added to call submitQuiz function when button is clicked
         submitButton.addEventListener('click', submitQuiz);
-
     };
 
     // event listeners fpr prev/next clicks and update currentQuestionIndex variable.
     next.addEventListener("click", function() {
-        if (currentQuestionIndex < bodytypeQuiz.length - 1) {
+        if (currentQuestionIndex < bodytypeQuiz.length - 1 && isQuesstionAnswered === true) {
             currentQuestionIndex++;
             displayQuestion(currentQuestionIndex);
+            isQuesstionAnswered = false;
         }
     });
 
@@ -138,6 +139,7 @@ function handleAnswers() {
         button.addEventListener('click', function() {
             userAnswers[currentQuestionIndex] = this.getAttribute('data-choice');
             highlightSelectedChoice(this);
+            document.getElementById('next-btn').classList.remove(`selected`);
         });
     });
 }
@@ -151,6 +153,8 @@ function highlightSelectedChoice(selectedButton) {
     });
     // Add highlight to selected button
     selectedButton.classList.add('selected');
+
+    isQuesstionAnswered = true;
 }
 
 function createResult() {

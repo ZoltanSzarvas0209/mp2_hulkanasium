@@ -16,6 +16,7 @@ const close = document.getElementById('close-btn');
 
 close.addEventListener("click", function() {
     form.style.display = "none";
+    window.location.reload(); // reload window - fixed functionality issue after closing window
 })
 
 

@@ -117,8 +117,7 @@ h2 {
 }
 
 .choice-btn {
-  width:100%;
-  max-width: 468px;
+  width:468px;
   margin: 10px;
 }
 
@@ -182,7 +181,7 @@ h2 {
   flex-direction: column;
   width: 90vw;
   height: 90vh;
-  background-color: rgb(54,52,33);
+  background-color: rgb(54,52,33, 0.96);
   border-radius: 10px;
   padding-top: 20%;
 }
@@ -274,5 +273,26 @@ footer {
     font-size: 16px;
     width: 160px;
     height: 40px;
+  }
+
+  .choice-btn {
+    width:90%;
+    height: auto;
+    max-width: 468px;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+    #submit-btn {
+    font-size: 16px;
+    width: 160px;
+    height: 40px;
+  }
+  
+    .question {
+    width: 90%;
+    margin-top: 5%; 
+    font-size: 18px;
+    padding: 16px;
   }
 }
