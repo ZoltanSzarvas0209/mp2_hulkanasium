@@ -101,16 +101,19 @@ function questionNav() {
     //remove next button when not needed
     if (currentQuestionIndex === bodytypeQuiz.length -1) {
         next.classList.add('hidden');
-    }
+    };
 
-    //add submit button at the end of quiz
     if (currentQuestionIndex === bodytypeQuiz.length -1) {
         const navDiv = document.querySelector('.navigation');
         const submitButton = document.createElement('button');
         submitButton.textContent = 'SUBMIT';
         submitButton.id = 'submit-btn';
         navDiv.appendChild(submitButton);
-    }
+
+        // event listener added to call submitQuiz function when button is clicked
+        submitButton.addEventListener('click', submitQuiz);
+
+    };
 
     // event listeners fpr prev/next clicks and update currentQuestionIndex variable.
     next.addEventListener("click", function() {
@@ -126,6 +129,7 @@ function questionNav() {
             displayQuestion(currentQuestionIndex);
         }
     });
+
 }
 
 function handleAnswers() {
@@ -149,6 +153,42 @@ function highlightSelectedChoice(selectedButton) {
     selectedButton.classList.add('selected');
 }
 
-function submitQuiz() {
+function createResult() {
 
+    let bodyType ="";
+
+    // calculate how many times each letter is present in the array( userAnswers populated from quiz)
+    let countA = userAnswers.filter(answer => answer === 'A').length;
+    let countB = userAnswers.filter(answer => answer === 'B').length;
+    let countC = userAnswers.filter(answer => answer === 'C').length;
+
+    // Add logic to determine body type
+
+    if (countA >= 3) {
+        bodyType ='Ectomorph';
+    } else if (countB >= 3) {
+        bodyType ='Mesomorph';
+    } else if (countC >= 3) {
+        bodyType ='Endomorph';
+    } else if (countA === countB && countC < 2) {
+        bodyType ='Mixed: 50%/50% Ectomorph and Mesomorph';
+    } else if (countA === countC && countB < 2) {
+        bodyType ='Mixed: 50%/50% Ectomorph and Endomorph';
+    } else if (countB === countC && countA < 2) {
+        bodyType ='Mixed: 50%/50% Endomorph and Mesomorph';
+    };
+
+    // create html based on bodytype determined
+    quizResult.innerHTML = `
+    <div>
+        <p>Based on the answers you provided, your Body Type is: ${bodyType}</p> 
+        <img src="" alt="An image of a ${bodyType} body type">
+    </div>`;
+
+    quizResult.style.display = 'block';
+}
+
+function submitQuiz() {
+    quiz.style.display = 'none';
+    createResult();
 }
