@@ -59,14 +59,14 @@ function displayQuestion(index) {
     const currentQuestion = bodytypeQuiz[index];
     quiz.innerHTML = 
     `<div class="question">${currentQuestion.question}</div>
-    <div class="choices">
-        <button class="choice-btn" data-choice="A"> ${currentQuestion.choices.A}</button>
-        <button class="choice-btn" data-choice="B"> ${currentQuestion.choices.B}</button>
-        <button class="choice-btn" data-choice="C"> ${currentQuestion.choices.C}</button>
+    <div class="choices center">
+        <button class="choice-btn btn" data-choice="A"> ${currentQuestion.choices.A}</button>
+        <button class="choice-btn btn" data-choice="B"> ${currentQuestion.choices.B}</button>
+        <button class="choice-btn btn" data-choice="C"> ${currentQuestion.choices.C}</button>
     </div>
     <div class="navigation">
-        <button class="nav-btn hidden" id="prev-btn">Prev</button>
-        <button class="nav-btn" id="next-btn">Next</button>
+        <button class="nav-btn btn hidden" id="prev-btn">Prev</button>
+        <button class="nav-btn btn" id="next-btn">Next</button>
     </div>`
     /*
     `
@@ -156,6 +156,7 @@ function highlightSelectedChoice(selectedButton) {
 function createResult() {
 
     let bodyType ="";
+    let description="";
 
     // calculate how many times each letter is present in the array( userAnswers populated from quiz)
     let countA = userAnswers.filter(answer => answer === 'A').length;
@@ -178,11 +179,22 @@ function createResult() {
         bodyType ='Mixed: 50%/50% Endomorph and Mesomorph';
     };
 
+    // set description based on bodyType
+
+    if (bodyType === 'Ectomorph') {
+        description = "Ectomorphs are naturally lean and have difficulty gaining weight,both in terms of muscle and fat.They typically have a fast metabolism and a slim build with narrow shoulders and hips.";
+    } else if (bodyType === 'Mesomorph') {
+        description = "Mesomorphs have a naturally muscular physique and can gain muscle easily. They often have a more athletic build with broader shoulders, a narrower waist, and a moderate metabolism."
+    } else {
+        description = "Endomorphs tend to have a softer, rounder body and gain weight easily, often in the form of both muscle and fat. They typically have a slower metabolism and may find it challenging to stay lean."
+    };
+
     // create html based on bodytype determined
     quizResult.innerHTML = `
     <div>
-        <p>Based on the answers you provided, your Body Type is: ${bodyType}</p> 
-        <img src="" alt="An image of a ${bodyType} body type">
+        <p id="result-text">Based on the answers you provided, your Body Type is: ${bodyType}</p> 
+        <img id="quiz-result-img" src="assets/images/quizresultimg.png" alt="An image of a ${bodyType} body type">
+        <p id="body-description">${description}</p>
     </div>`;
 
     quizResult.style.display = 'block';
