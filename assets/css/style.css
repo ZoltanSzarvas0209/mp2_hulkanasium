@@ -169,8 +169,12 @@ h2 {
 }
 
 #calorie-value {
-  font-size: 32px;
+  font-size: 48px;
   font-weight: 800;
+}
+
+#reset-btn {
+  margin: 20px;
 }
 
 /*---------------------------Get My Plan section----------------------------*/
