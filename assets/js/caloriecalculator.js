@@ -1,8 +1,22 @@
 
-document.addEventListener("DOMContentLoaded", function() {
+// handleSubmit function to link html validation together with custome calculateCalorie() function
+function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = document.getElementById('calorie-input-form');
+
+    if (form.checkValidity()) {
+        calculateCalorie();
+    } else {
+        form.reportValidity();
+    }
+}
+
+function calculateCalorie() {
+
     const calculateButton = document.getElementById('calculate-btn');
 
-    calculateButton.addEventListener("click", function() {
+    /*calculateButton.addEventListener("click", function() {*/
 
         const gender = document.getElementById('gender').value;
         const weight = parseFloat(document.getElementById('weight-input').value);
@@ -44,8 +58,8 @@ document.addEventListener("DOMContentLoaded", function() {
         var resultDiv = document.getElementById('calorie-result');
         resultDiv.style.display = "block";
 
-    });
+   /* });*/
 
-});
+};
 
 

@@ -43,10 +43,10 @@
         <div class="calorie-calculator-container" id="calorie-default">
             <h3 class="quiz-header">What're My Nutritional Needs?</h3>
             <p> Enter your weight, height and activity level to calculate your daily calorie needs.</p>
-            <div class="calorie-input">
-                <input id="weight-input" type="number" placeholder="Enter your weight in Kilograms">
-                <input id="height-input" type="number" placeholder="Enter your height in cm">
-                <input id="age-input" type="number" placeholder="Enter your age">
+            <form class="calorie-input center" id="calorie-input-form" onsubmit="return handleSubmit(event)">
+                <input id="weight-input" type="number" placeholder="Enter your weight in Kilograms" required> 
+                <input id="height-input" type="number" placeholder="Enter your height in cm" required>
+                <input id="age-input" type="number" placeholder="Enter your age" required>
                 <select id="gender" placeholder="Choose your gender">
                     <option value="male">male</option>
                     <option value="female">female</option>
@@ -56,8 +56,8 @@
                     <option value="moderate">MODERATE</option>
                     <option value="high">HIGH</option>
                 </select>
-            </div>
-            <button class="btn" id="calculate-btn">CALCULATE</button>
+                <button class="btn" id="calculate-btn" type="submit">CALCULATE</button>
+            </form>
         </div>
         <!-- Container to display the result od the calorie calculator -->
         <div class="calorie-result-container hidden" id="calorie-result">

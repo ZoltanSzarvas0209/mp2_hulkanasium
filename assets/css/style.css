@@ -149,9 +149,23 @@ h2 {
 .calorie-input {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 60%;
   height: auto;
-  margin: 3% 10%;
+  margin: 3% 20%;
+}
+
+.calorie-input input {
+  width: 100%;
+  height:auto;
+  margin: 4px;
+  text-align: center;
+}
+
+.calorie-input select {
+  width: 100%;
+  height: auto;
+  margin: 4px;
+  text-align: center;
 }
 
 #calorie-value {
