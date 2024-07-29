@@ -38,7 +38,7 @@ The idea of the site similarly to my first project is based on real life experie
 ## UX <a name="ux"></a>
 
 The methology of UXD was used in the planning and development of the project. 
-The choosen project is a fictional gym webpage that mimics all features of an ordinary website along with some added features to showcase use of JavaScript within the project. 
+The choosen project is a fictional gym webapp that mimics some features of an ordinary webapp along with some added features to showcase use of JavaScript within the project. 
 
 ### Technologies and Tools Used <a name="technologies"></a>
 
@@ -58,36 +58,89 @@ The choosen project is a fictional gym webpage that mimics all features of an or
 * additional resources
 
     * Coolors: https://coolors.co/ 
-    * FontAwesome: https://fontawesome.com/search?o=r&m=free&s=solid  - 
-    * ChatGPT: https://chat.openai.com/   - 
-    * Google Fonts: https://fonts.google.com/selection/embed -
+    * FontAwesome: https://fontawesome.com/search?o=r&m=free&s=solid
+    * Perplexity: perplexity.ai
+    * ChatGPT: https://chat.openai.com/
 
 ### Objective <a name="objective"></a>
 
-    * The objectives of the app is to promote health lifestyle and advertise the fictional gym Hulkanasium.
+    * The objectives of the app is to promote health lifestyle and advertise the fictional gym Hulkanasium. Furthermore , the app is intended to be a tool for users to gain some general knowledge about their body type and nutrition needs.
 
 ### Research <a name="research"></a>
 
 Extensive research took place before starting on the planing of the structure of the site. Visited several existing gym sites to find inspiration in design, test usability and find what is needed to fulfill user needs.
 
+While the original idea was to develop a complete webpage , this was scrapped and changed to a fitness app as I found it fulfills the requirements for my second milestone project better.
+
+During my research I focused on finding what most people would be comfortable with and came to realise that calorie intake is the basic "go to" when it comes to gaining/losing weight. I also figured that knowing "what you are" in terms of your body type is a must to be able to create specialised plans and therefore decided to implement these features.
+
 
 Websites visited for research:
 
 * [PureGym](https://www.puregym.com/)
+* [Nuffield Helath](https://www.nuffieldhealth.com/gyms/bristol)
+* [Healthline](https://www.healthline.com/health/quiz/quiz-whats-your-body-type)
+* [Bodybuilding](https://www.bodybuilding.com/fun/macronutcal.htm)
+
 
 ### Target Audience <a name="audience"></a>
+
+The target audiance of the application is very broad. IT aims to help all looking to get fitter with the first steps. wether it is commiting to a plan or just starting to watch what you eat. Generally it includes people looking to lose weight as well as fitness enthusiasts looking to gain muscle. The app also helpful to anyone that just wants to find out the "numbers" and be more aware of their eating habbits.
 
 ### User Stories <a name="user"></a>
 
 * User story 1:
 
+    - As a user looking to lose weight and therefore find out nutritional needs:
+        1. I want to find out what is my daily calorie need.
+        2. I want to find out how it changes based on my activity level.
+        3. I want to be able to get in touch to find out more.
+
 * User story 2:
 
+    - As a gym enthusiast I am looking to gain more understanding of my body:
+        1. I want to find out my body type to understand my training needs better
+        2. I want to know my nutritional needs to help with diet
+        3. I want to improve and get a personalised workout plan
+
 ### Structure and Design <a name="design"></a>
+
+* Layout:
+
+I designed the app to be a simple 1 page site with all information presented straight away. The page breaks into 3 section with a simple structure of Header - Body - 
+Footer.
+- The header simple features the name of the app.
+- The body is the main section of the project and it contains all interactive elements of the fitness app and therefore it can be broken down to 3 subsection:
+    1. Body Type Quiz
+    2. Calorie Calculator
+    3. Get my plan
+The 3 sections of the app was designed to fulfill the user stories of this simple app.
+- The footer displays the author and the social links associated with me.
+
 
 * Color Palette:   <img src="assets/images/color-palette.png">
 
 The above color palette where generated using https://coolors.co/ free color generator and the background image of the application. I'va added a generic white color to use for text to provide a strong contrast with the scheme.
+
+* Features:
+
+1. Header
+2. Main Page and background
+3. Body Type Quiz
+    1. Quiz
+    2. Navigation
+    3. Dynamic content
+4. Calorie Calculator
+    1. Main form
+    2. Dynamic content
+5. Get My Plan
+    1. Start screen
+    2. Pop-up form
+    2. Thank you page
+6. General UX features.
+    1. Interactive buttons
+    2. Visual feedback features
+
 
 ### Deployment <a name="deployment"></a>
 
@@ -106,7 +159,7 @@ To Deploy a project from your github repesatory, follow the steps below.
 
 ## Testing/Bugs/Fixes <a name="testing"></a>
 
-### HTML and CSS validation: <a name="htmlandcss"></a>
+### HTML,CSS and JS validation: <a name="htmlandcss"></a>
 
 ### Testing <a name="alltesting"></a>
 
