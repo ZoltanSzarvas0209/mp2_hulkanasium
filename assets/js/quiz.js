@@ -199,9 +199,15 @@ function createResult() {
         <p id="result-text">Based on the answers you provided, your Body Type is: ${bodyType}</p> 
         <img id="quiz-result-img" src="assets/images/quizresultimg.png" alt="An image of a ${bodyType} body type">
         <p id="body-description">${description}</p>
+        <button class="btn" id="restart-quiz">RESTART</button>
     </div>`;
 
     quizResult.style.display = 'block';
+
+    // add reset button
+    document.getElementById('restart-quiz').addEventListener("click", function() {
+        startQuiz();
+    });
 }
 
 function submitQuiz() {
