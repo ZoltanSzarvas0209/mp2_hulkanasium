@@ -189,19 +189,22 @@ h2 {
 
 .form-container {
   position: fixed;
-  height: 90vh;
-  width: 90vw;
+  height: 90%;
+  width: 90%;
+  max-width: 1024px;
   top: 5%;
+  margin: 5%;
 }
 
 #form {
   display: flex;
   flex-direction: column;
-  width: 90vw;
-  height: 90vh;
+  width: 90%;
+  height: 90%;
   background-color: rgb(54,52,33, 0.96);
   border-radius: 10px;
   padding-top: 20%;
+  margin: 5%;
 }
 
 #form label {
@@ -312,5 +315,10 @@ footer {
     margin-top: 5%; 
     font-size: 18px;
     padding: 16px;
+  }
+
+  .form-container {
+    height: 95%;
+    width: 98%;
   }
 }
