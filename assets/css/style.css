@@ -185,6 +185,26 @@ h2 {
   height: 30%;
 }
 
+/*---------------------thank you pop up-----------------------------*/
+
+#thankyoupage {
+  position: fixed;
+  height: auto;
+  width: 80%;
+  max-width: 1024px;
+  top: 5%;
+  margin: 5%;
+  border: solid;
+  border-color: rgb(179,155,106);
+  border-radius: 10%;
+  background-color: rgb(27 26 25);
+}
+
+#thankyoupage p {
+  margin: 48px;
+  font-size: 22px;
+}
+
 /*-----------------------------Popup form styling-----------------------------------*/
 
 .form-container {
@@ -320,5 +340,20 @@ footer {
   .form-container {
     height: 95%;
     width: 98%;
+  }
+/*------thank you pop-up------------*/
+  #thankyoupage {
+    height: auto;
+    width: 90%;
+    margin: 3%;
+  }
+  
+  #thankyoupage p {
+    margin: 48px;
+    font-size: 22px;
+  }
+  
+  #thankyoupage h1 {
+    padding-top: 10px;
   }
 }

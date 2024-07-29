@@ -39,3 +39,27 @@ function sendMail(contactForm) {
 
     return false;  // To block from loading a new page
 };
+
+// create pop up thank you div upon submiting the form
+
+document.getElementById('form').addEventListener("submit", function(event){
+    event.preventDefault(); // Prevent form from submitting
+
+    if (this.checkValidity()) {
+        const thankyoupage = document.getElementById('form-container');
+        thankyoupage.innerHTML = `
+        <div id="thankyoupage">
+            <h1>Thank you for your enquiry!</h1>
+            <p>Your personalised workout plan will be e-mailed to you within 48 hours.</p>
+            <button class="btn" id="close">CLOSE</button>
+        </div>`;
+
+        // Add event listener to the close button after it's created
+        document.getElementById('close').addEventListener("click", function() {
+            document.getElementById('form-container').style.display = "none";
+            window.location.reload();
+        });
+    } else {
+        this.reportValidity();
+    }
+});
