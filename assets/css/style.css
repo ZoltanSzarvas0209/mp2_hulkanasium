@@ -3,8 +3,8 @@
  /*-----------------------------General styling-----------------------------------*/
 
  body {
-  margin: 0px;
-  max-width: 1024px;
+  width: 80%;
+  margin:0;
 }
 
 .hidden {
@@ -301,7 +301,7 @@ footer {
 
 /*-----------------------------media queries for mobile/tablet screen size-----------------------------------*/
 
-@media (max-width: 460px) {
+@media (max-width: 720px) {
   h1 {
     font-size: 48px;
   }
@@ -357,3 +357,20 @@ footer {
     padding-top: 10px;
   }
 }
+
+/*-------------- media queries for large screens------------------*/
+@media (min-width: 1600px) {
+
+  .main-container {
+    display: flex;
+    flex-direction:column;
+    width:60%;
+    margin: 5% 20% 5%;
+  
+  }
+  
+  footer {
+    font-size: 48px;
+  }
+  
+  }
