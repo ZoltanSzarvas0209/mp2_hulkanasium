@@ -61,6 +61,8 @@ The choosen project is a fictional gym webapp that mimics some features of an or
     * FontAwesome: https://fontawesome.com/search?o=r&m=free&s=solid
     * Perplexity: perplexity.ai
     * ChatGPT: https://chat.openai.com/
+    * Google Fonts: https://fonts.google.com/
+    * W3School: https://www.w3schools.com/
 
 ### Objective <a name="objective"></a>
 
@@ -105,7 +107,9 @@ The target audiance of the application is very broad. IT aims to help all lookin
 
 ### Structure and Design <a name="design"></a>
 
-* Layout:
+
+## Layout: <a name="layout"></a>
+
 
 I designed the app to be a simple 1 page site with all information presented straight away. The page breaks into 3 section with a simple structure of Header - Body - 
 Footer.
@@ -118,11 +122,19 @@ The 3 sections of the app was designed to fulfill the user stories of this simpl
 - The footer displays the author and the social links associated with me.
 
 
+## Design Chices: <a name="designchoice"></a>
+
 * Color Palette:   <img src="assets/images/color-palette.png">
 
 The above color palette where generated using https://coolors.co/ free color generator and the background image of the application. I'va added a generic white color to use for text to provide a strong contrast with the scheme.
 
-* Features:
+* Font-family:
+
+ I choose Roboto Serif font-family with sans-seif as a fallback option.
+
+
+## Features: <a name="features"></a>
+
 
 1. Header
 2. Main Page and background
@@ -141,7 +153,9 @@ The above color palette where generated using https://coolors.co/ free color gen
     1. Interactive buttons
     2. Visual feedback features
 
-* Wireframes:
+
+## Wireframes: <a name="wireframes"></a>
+
 
 The original wireframes had a slightly different lay out then the final product. While initially planning the app I accounted for issues with the appearence of the features in different screen sizes. However, once code-ing started and I had the visuals in front of me I was happy with how it looked and decided there was no need to make mayor adjustments and therefore the layout stays the same consistently.
 
@@ -200,7 +214,7 @@ To Deploy a project from your github repesatory, follow the steps below.
 | Navigation | Clciked and Tested Each Button Provided | Fully Interavtive Navigation Without Using Browser Buttons | PASS |
 | UX - User Feedback - Buttons | Visually Checked All Expected Features | Background Color to Change and Appear as Expected | FAIL(2) |
 | UX - User Feedback - Pop-ups | Visually Checked All Expected Features | Pop-Up Window to Appear as Expected | PASS |
-| Layout | Visual inspection of all features | Match Design as Expected | Fail(3) |
+| Layout | Visual inspection of all features | Match Design as Expected | FAIL(3,6) |
 | User Experience - Actions | Click and Test Each Feature Individually to assess behaviour | Each feature to Interactively React as Designed | FAIL(4) | 
 
 
@@ -240,6 +254,12 @@ To Deploy a project from your github repesatory, follow the steps below.
     To resolve this problem, I adjusted the html and included a form element that now had all required fields added. After the html validation was in place an event listener was attached to the Calculate Button to prevent defult action until the custom function written is carried out.
     The above changed resolved the issue.
 
+ 6. Thank you pop up page goes out of alignment on large screen sizes( larger than 1134px). 
+    - I fixed the issue with media quires and making the element's position absolute.
+
+    <details><summary> Sceenshot of the problem: </summary>
+    <img src="assets/readme-images/predepissue6.png">
+    </details> 
 
 #### At the end of the Project further testing took place to identify any shortcomings. See details below: <a name="postdeployment"></a>
 
