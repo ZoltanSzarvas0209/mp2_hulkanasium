@@ -1,3 +1,5 @@
+![Mockup](assets/readme-images/amiresponsive.png)
+
 ## Introduction
 
 Hi there, 
