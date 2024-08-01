@@ -6,9 +6,9 @@ Hulkanasium is a fictional fitness app created as the second Milestone Project f
 
 The idea of the site similarly to my first project is based on real life experience. The name Hulkanasium is fictional name my collegues and I come up with for a basement gym we had at a Hotel we all worked together in. The gym had a large Hulk picture in the middle that inspired the name. The second project of the web applications course requires the implementation of JavaSript along with html and css as it was in the previous project. To fulfill the requirement I decided to bring Hulkanasium alive and design a fitness application for it, where users can complete a quiz to find out their body type along with a calorie calculator and a form field to get a workout plan based on their results.
 
-## **[ Hulkanasium Live Site ] (insert lin here)**
+## **[Hulkanasium Live Site](https://zoltanszarvas0209.github.io/mp2_hulkanasium/)**
 
-## **[Repository](insert link here)**
+## **[Repository](https://github.com/ZoltanSzarvas0209/mp2_hulkanasium.git)**
 
 ## Table of contents
 
