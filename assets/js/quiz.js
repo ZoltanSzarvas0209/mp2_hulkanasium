@@ -69,17 +69,6 @@ function displayQuestion(index) {
         <button class="nav-btn btn hidden" id="prev-btn">Prev</button>
         <button class="nav-btn btn selected" id="next-btn">Next</button>
     </div>`
-    /*
-    `
-    <div class="question">${currentQuestion.question}</div>
-
-    <div class="choices">
-        ${currentQuestion.choices.map((choice, i) => `
-            <button class="choice-btn" data-choice-index="${i}">${choice}</button>
-        `).join('')}
-    </div>
-    `
-    */
 
     // add event listeners and functionality to navigation buttons
     questionNav();
@@ -104,10 +93,13 @@ function questionNav() {
         next.classList.add('hidden');
     };
 
+    // dynamically create submit button
+
     if (currentQuestionIndex === bodytypeQuiz.length -1) {
         const navDiv = document.querySelector('.navigation');
         const submitButton = document.createElement('button');
         submitButton.textContent = 'SUBMIT';
+        submitButton.classList.add('selected');
         submitButton.id = 'submit-btn';
         navDiv.appendChild(submitButton);
 
@@ -155,6 +147,23 @@ function highlightSelectedChoice(selectedButton) {
     selectedButton.classList.add('selected');
 
     isQuesstionAnswered = true;
+
+    // submit btn higlight and hover effect( already installed in css ,however effect stopped working after this code was added and therefore I extended it to restart effect)
+
+    if (currentQuestionIndex === 4){
+    const submitBtn = document.getElementById('submit-btn');
+    submitBtn.classList.remove('selected');
+    submitBtn.style.backgroundColor = 'rgb(138,130,110)';
+
+    submitBtn.addEventListener('mouseenter', function() {
+    this.style.backgroundColor = 'rgb(179,155,106)';
+    });
+      
+    submitBtn.addEventListener('mouseleave', function() {
+    this.style.backgroundColor = 'rgb(138,130,110)'; 
+    });
+    }
+
 }
 
 function createResult() {
@@ -206,8 +215,13 @@ function createResult() {
 
     // add reset button
     document.getElementById('restart-quiz').addEventListener("click", function() {
+        currentQuestionIndex = 0;
+        userAnswers = [];
+        isQuesstionAnswered = false;
+        quizResult.style.display = 'none';
         startQuiz();
     });
+
 }
 
 function submitQuiz() {

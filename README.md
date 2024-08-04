@@ -138,22 +138,23 @@ The above color palette where generated using https://coolors.co/ free color gen
 ## Features: <a name="features"></a>
 
 
-1. Header
-2. Main Page and background
+1. Header<details><summary>Header</summary><img src="assets/feature-images/featureheader.png"></details>
+2. Main Page and background<details><summary> MainPage</summary><img src="assets/feature-images/featuremainpage.png"></details>
 3. Body Type Quiz
-    1. Quiz
-    2. Navigation
-    3. Dynamic content
+    1. Quiz<details><summary> Quiz default </summary><img src="assets/feature-images/featurebodytypequiz.png"></details>
+    2. Navigation<details><summary> Quiz Questions </summary><img src="assets/feature-images/featurebodytypequiz2.png"></details>
+    3. Dynamic content<details><summary> Quiz functions </summary><img src="assets/feature-images/featurebodytypequiz3.png"></details>
 4. Calorie Calculator
-    1. Main form
-    2. Dynamic content
+    1. Main <details><summary> Calculator default </summary><img src="assets/feature-images/featurecalculator.png"></details>
+    2. Dynamic content<details><summary> Calculator result </summary><img src="assets/feature-images/featurecalculator2.png"></details>
 5. Get My Plan
-    1. Start screen
-    2. Pop-up form
-    2. Thank you page
+    1. Start screen<details><summary> Get My Plan default </summary><img src="assets/feature-images/featuregetmyplan.png"></details>
+    2. Pop-up form<details><summary> Pop-up form </summary><img src="assets/feature-images/featuregetmyplan2.png"></details>
+    2. Thank you page<details><summary> Thank you pop up </summary><img src="assets/feature-images/featuregetmyplan3.png"></details>
 6. General UX features.
     1. Interactive buttons
     2. Visual feedback features
+7. Footer<details><summary> footer </summary><img src="assets/feature-images/featurefooter.png"></details>
 
 
 ## Wireframes: <a name="wireframes"></a>
@@ -202,6 +203,8 @@ To Deploy a project from your github repesatory, follow the steps below.
 
 #### Initial testing items below arose during development and most were dealt with at the time.  <a name="predeployment"></a>
 
+## RESPONSIVENESS
+
 | **Feature** | **Test Method** | **Expectation** | **Outcome** |
 |-------------|-----------------|-----------------|-------------|
 | Header Responsivness | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive Layout | PASS |
@@ -211,14 +214,66 @@ To Deploy a project from your github repesatory, follow the steps below.
 | Calorie Calculator Responsiveness | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive LAyout| PASS |
 | Get My Plan-Pop-up Responsiveness | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive LAyout| PASS |
 
+## Buttons functionality
+
 | **Feature** | **Test Method** | **Expectation** | **Outcome** |
 |-------------|-----------------|-----------------|-------------|
-| Navigation | Clciked and Tested Each Button Provided | Fully Interavtive Navigation Without Using Browser Buttons | PASS |
-| UX - User Feedback - Buttons | Visually Checked All Expected Features | Background Color to Change and Appear as Expected | FAIL(2) |
-| UX - User Feedback - Pop-ups | Visually Checked All Expected Features | Pop-Up Window to Appear as Expected | PASS |
-| Layout | Visual inspection of all features | Match Design as Expected | FAIL(3,6) |
-| User Experience - Actions | Click and Test Each Feature Individually to assess behaviour | Each feature to Interactively React as Designed | FAIL(4) | 
+| Navigation-Start Quiz | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page1 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page1 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page2 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page2 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page3 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page3 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page4 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page4 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page5 submit | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page5 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Result restart | Click button | Button to trigger action as expected | FAIL(4,7) |
+| Navigation-Calculate button | Click button | Button to trigger action as expected | FAIL(5) |
+| Navigation-Calculate reset | Click button | Button to trigger action as expected | PASS |
+| Navigation-Get My Plan button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Pop-Up close button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Pop-up submit button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Thank you page reset | Click button | Button to trigger action as expected | PASS |
 
+## Buttons appearence
+
+| **Feature** | **Test Method** | **Expectation** | **Outcome** |
+|-------------|-----------------|-----------------|-------------|
+| Navigation-Start Quiz | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page1 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page1 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page2 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page2 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page3 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page3 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page4 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page4 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page5 submit | Click button | Button to trigger action as expected | FAIL(2) |
+| Navigation-Quiz page5 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Result restart | Click button | Button to trigger action as expected | PASS |
+| Navigation-Calculate button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Calculate reset | Click button | Button to trigger action as expected | PASS |
+| Navigation-Get My Plan button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Pop-Up close button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Pop-up submit button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Thank you page reset | Click button | Button to trigger action as expected | PASS |
+
+## Layout
+
+| **Feature** | **Test Method** | **Expectation** | **Outcome** |
+|-------------|-----------------|-----------------|-------------|
+| Layout header | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout main page/background | visual inspection | page/feature to appear as expected/designed | FAIL(3) |
+| Layout Body Type Quiz start | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Body Type Quiz page 1 - 5 | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Body Type Quiz result | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Calculator start | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Calculator result | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Get My Plan start | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Get My Plan-Pop up | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Get My Plan- Thank you pop up | visual inspection | page/feature to appear as expected/designed | FAIL(6) |
 
  - Issues found during testing pre-deployment listed below:
 
@@ -230,8 +285,9 @@ To Deploy a project from your github repesatory, follow the steps below.
     <img src="assets/readme-images/predepissue1.png">
     </details> 
 
- 2. On the last page of the quiz a dynamically submit button appears that do not macth the UX design pattern and does not appear darkened out(giving feedback to the user that it can not yet be clicked).
-    - The issue is not yet resolved.
+ 2. On the last page of the quiz a dynamically submit button appears that do not macth the UX design pattern and does not appear darkened out(giving feedback to the user 
+    that it can not yet be clicked).
+    - The issue was fixed by adding the "selected" css class to the button when created and then removed again when an answer is selected. This coused further issues at first with the background color not behaving as expected and additional event listeners were added to fix the newly arrisen issue.
 
     <details><summary> Sceenshot of the problem: </summary>
     <img src="assets/readme-images/predepissue2.png">
@@ -249,7 +305,8 @@ To Deploy a project from your github repesatory, follow the steps below.
     </details>
 
  4. Found that while the reset button provided for the quiz is taking you back to the quiz as expected, it land on the last question insted of the first.
-    - The issue is not yet resolved.
+    - Investigated the issue and found that the quiz related variables were not reseted at the time of clicking the button.
+    The following code was added to reset all neccessary variables: currentQuestionIndex = 0, userAnswers = [], isQuesstionAnswered = false;
 
  5. The Calorie Calculator's Calculate button would not work as expected. While the output was what I wanted, validation was an issue.
     - The original implementation had the input fields and dropdown menus embedded individually rathen than part of a form. That made html validation impossible.   
@@ -262,6 +319,13 @@ To Deploy a project from your github repesatory, follow the steps below.
     <details><summary> Sceenshot of the problem: </summary>
     <img src="assets/readme-images/predepissue6.png">
     </details> 
+
+ 7. Restart button dosen't hide the result page , but places the quiz above it.
+    - the following code was added to the reset function triggered by an eventlistener: quizResult.style.display = "none"; this has resolved the issue.
+
+    <details><summary> Sceenshot of the problem: </summary>
+    <img src="assets/readme-images/predepissue7.png">
+    </details>   
 
 #### At the end of the Project further testing took place to identify any shortcomings. See details below: <a name="postdeployment"></a>
 
