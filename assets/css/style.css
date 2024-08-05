@@ -357,6 +357,16 @@ footer {
     height: 95%;
     width: 98%;
   }
+
+/*------footer---------------*/
+
+  footer {
+    font-size: 24px;
+  }
+
+  .social-icons {
+    font-size: 24px;
+  }
 /*------thank you pop-up------------*/
   #thankyoupage {
     height: auto;

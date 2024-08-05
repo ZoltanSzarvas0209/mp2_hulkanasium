@@ -199,6 +199,44 @@ To Deploy a project from your github repesatory, follow the steps below.
 
 ### HTML,CSS and JS validation: <a name="htmlandcss"></a>
 
+1. HTML validation: W3C validator was used to do this.
+    There was a number of issues highlghted initially. Errors were caused by placeholders placed on <select> elements and unallowed target atrbute used in <a> tags.
+    I had couple of warnings relating to script elements having type attribute. I cleared all the forementined and the validation passed with no warnings.
+    
+-   <details> <summary> Initial validation errors </summary>
+    <img src="assets/readme-images/htmlvalerror.png">
+    </details>
+-   <details> <summary> Initial validation warning </summary>
+    <img src="assets/readme-images/htmlvalwarning.png">
+    </details>
+
+-   <details> <summary> PASSED VALIDATION </summary>
+    <img src="assets/readme-images/htmlvalnoerror.png">
+    </details>
+
+
+2. CSS validation: W£C validator was used and code passed straight away.
+
+-   <details> <summary> PASSED VALIDATION </summary>
+    <img src="assets/readme-images/cssvalidation.png">
+    </details>
+
+3. JavaScript validation: I  ran the code through https://jshint.com/ to validate my javascript. There were no errors , however high number of warnings were issued.
+    Investigating the warning I found that most relates to javascript versions and had no effect on the application so I decided not to address them. Further issue were due to missing or unneccessary semicolons, all of which had been replaced or cleared accordingly. Finally had several warning relating to unused variables. I found that these are due to accessibility by the software as the each js file were tested seperately. 
+
+-   <details> <summary> PASSED VALIDATION </summary>
+    <img src="assets/readme-images/jsvalidationquiz.png">
+    </details>
+
+-   <details> <summary> PASSED VALIDATION </summary>
+    <img src="assets/readme-images/jscalculate.png">
+    </details>
+
+-   <details> <summary> PASSED VALIDATION </summary>
+    <img src="assets/readme-images/jsvalidationgetmyplan.png">
+    </details>
+
+
 ### Testing <a name="alltesting"></a>
 
 #### Initial testing items below arose during development and most were dealt with at the time.  <a name="predeployment"></a>
@@ -335,6 +373,18 @@ To Deploy a project from your github repesatory, follow the steps below.
 
 #### User Testing <a name="usertest"></a>
 #### Accesibility <a name="access"></a>
+
+*   Accessibility was tested with google's lighthouse tool: The initial result was lower then expected and highlighted a couple of issue.
+1. no label elements were added to associated select fields, this was rectified and the label fields were also added to all input fields in the calorie calculator to maintain a consistent look.
+2. contrast ratio between the buttons and it's text. Investigated this issue and found that with the color pattern used the contrast checker would only pass dark text with good ratio. I've adjusted boldness and size to highlight the text but found swapping to a dark pattern unreasonable and decided against it. The overall accessibility score has still been significantly imrpoved and is now at a good level.
+
+<details><summary>Accessibility before adjustments</summary>
+<img src="assets/readme-images/accessibilitylow.png">
+</details> 
+
+<details><summary>Accessibility after adjustment</summary>
+<img src="assets/readme-images/accessibilityhigh.png">
+</details>
 
 ## Media <a name="media"></a>
 

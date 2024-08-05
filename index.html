@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <title>Hulkanasium Fitness App</title>
 
-    <script type="text/javascript"
+    <script
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script type="text/javascript">
+    <script>
         (function(){
              emailjs.init({
              publicKey: "tur4zwzn6oQL_Fnxq",
@@ -44,14 +44,19 @@
             <h3 class="quiz-header">What're My Nutritional Needs?</h3>
             <p> Enter your weight, height and activity level to calculate your daily calorie needs.</p>
             <form class="calorie-input center" id="calorie-input-form" onsubmit="return handleSubmit(event)">
+                <label for="weight-input">WEIGHT</label>
                 <input id="weight-input" type="number" placeholder="Enter your weight in Kilograms" required> 
+                <label for="height-input">HEIGHT</label>
                 <input id="height-input" type="number" placeholder="Enter your height in cm" required>
+                <LAbel for="age-input">AGE</LAbel>
                 <input id="age-input" type="number" placeholder="Enter your age" required>
-                <select id="gender" placeholder="Choose your gender">
+                <label for="gender">GENDER</label>
+                <select id="gender">
                     <option value="male">male</option>
                     <option value="female">female</option>
                 </select>
-                <select id="activity-level" placeholder="select your activity level">
+                <label for="activity-level">ACTIVITY LEVEL</label>
+                <select id="activity-level">
                     <option value="low">LOW</option>
                     <option value="moderate">MODERATE</option>
                     <option value="high">HIGH</option>
@@ -86,7 +91,7 @@
                 <input id="email" class="form-input" type="email" name="email" value="email" required>
     
                 <label for="textarea">Additional Info</label>
-                <textarea id="textarea" name="textarea" value="textarea" placeholder="Let us know any diet and exercise preferences and whether at home or in a gym."></textarea>
+                <textarea id="textarea" name="textarea" placeholder="Let us know any diet and exercise preferences and whether at home or in a gym."></textarea>
     
                 <input class="submit-btn" type="submit" value="Submit">
 
@@ -101,11 +106,10 @@
         <p>Made By Zoltan Szarvas</p>
         <ul class="social-icons">
             <li>
-                <a href="https://github.com/dashboard" targer="_blank" aria-label="visit my github profile"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/dashboard" aria-label="visit my github profile"><i class="fa-brands fa-github"></i></a>
             </li>
             <li>
-                <a href="www.linkedin.com/in/zoltan-szarvas-300753194" targer="_blank" aria-label="visit my LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a>
-
+                <a href="https://www.linkedin.com/feed/" aria-label="visit my LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a>
             </li>
         </ul>
     </footer>

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     getmyplan.addEventListener("click", function() {
         form.style.display = "block";
-    })
+    });
 
 });
 
@@ -17,7 +17,7 @@ const close = document.getElementById('close-btn');
 close.addEventListener("click", function() {
     form.style.display = "none";
     window.location.reload(); // reload window - fixed functionality issue after closing window
-})
+});
 
 
 // EmailJS
@@ -35,10 +35,10 @@ function sendMail(contactForm) {
         function(error) {
             console.log("ERROR", error);
         }
-    )
+    );
 
     return false;  // To block from loading a new page
-};
+}
 
 // create pop up thank you div upon submiting the form
 

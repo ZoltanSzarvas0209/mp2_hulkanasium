@@ -68,7 +68,7 @@ function displayQuestion(index) {
     <div class="navigation">
         <button class="nav-btn btn hidden" id="prev-btn">Prev</button>
         <button class="nav-btn btn selected" id="next-btn">Next</button>
-    </div>`
+    </div>`;
 
     // add event listeners and functionality to navigation buttons
     questionNav();
@@ -86,12 +86,12 @@ function questionNav() {
     //remove prev button when not needed
     if (currentQuestionIndex > 0) {
         nav.classList.remove('hidden');
-    };
+    }
 
     //remove next button when not needed
     if (currentQuestionIndex === bodytypeQuiz.length -1) {
         next.classList.add('hidden');
-    };
+    }
 
     // dynamically create submit button
 
@@ -105,7 +105,7 @@ function questionNav() {
 
         // event listener added to call submitQuiz function when button is clicked
         submitButton.addEventListener('click', submitQuiz);
-    };
+    }
 
     // event listeners fpr prev/next clicks and update currentQuestionIndex variable.
     next.addEventListener("click", function() {
@@ -190,17 +190,17 @@ function createResult() {
         bodyType ='Mixed: 50%/50% Ectomorph and Endomorph';
     } else if (countB === countC && countA < 2) {
         bodyType ='Mixed: 50%/50% Endomorph and Mesomorph';
-    };
+    }
 
     // set description based on bodyType
 
     if (bodyType === 'Ectomorph') {
         description = "Ectomorphs are naturally lean and have difficulty gaining weight,both in terms of muscle and fat.They typically have a fast metabolism and a slim build with narrow shoulders and hips.";
     } else if (bodyType === 'Mesomorph') {
-        description = "Mesomorphs have a naturally muscular physique and can gain muscle easily. They often have a more athletic build with broader shoulders, a narrower waist, and a moderate metabolism."
+        description = "Mesomorphs have a naturally muscular physique and can gain muscle easily. They often have a more athletic build with broader shoulders, a narrower waist, and a moderate metabolism.";
     } else {
-        description = "Endomorphs tend to have a softer, rounder body and gain weight easily, often in the form of both muscle and fat. They typically have a slower metabolism and may find it challenging to stay lean."
-    };
+        description = "Endomorphs tend to have a softer, rounder body and gain weight easily, often in the form of both muscle and fat. They typically have a slower metabolism and may find it challenging to stay lean.";
+    }
 
     // create html based on bodytype determined
     quizResult.innerHTML = `
