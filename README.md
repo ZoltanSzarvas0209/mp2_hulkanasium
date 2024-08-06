@@ -130,7 +130,6 @@ Footer.
 The 3 sections of the app was designed to fulfill the user stories of this simple app.
 - The footer displays the author and the social links associated with me.
 
-
 ## Design Chices: <a name="designchoice"></a>
 
 * Color Palette:   <img src="assets/images/color-palette.png">
@@ -162,6 +161,7 @@ The above color palette where generated using https://coolors.co/ free color gen
     1. Interactive buttons
     2. Visual feedback features
 7. Footer<details><summary> footer </summary><img src="assets/feature-images/featurefooter.png"></details>
+8. 404 page<details><summary> 404 </summary><img src="assets/feature-images/feature404.png"></details>
 
 
 ## Wireframes: <a name="wireframes"></a>
@@ -174,6 +174,9 @@ The original wireframes had a slightly different lay out then the final product.
         2. decresed the amount of choices available for each multiple choice question.
         3. included a textarea in the Get My Plan section for the user to be able to write custome messages.
         4. scraped the seperate Get My Plan page idea and replaced it with a pop-up form
+
+    - Change added post deployment:
+        1. I added a 404 html page past deployment in order to achive merit criteria. This was not part of the original plans therefore I had no wireframe designed for it.
 
 -   <details><summary> Wireframes: Home Default </summary>
     <img src="assets/readme-images/wireframe_home.png">
@@ -209,6 +212,8 @@ To Deploy a project from your github repesatory, follow the steps below.
 1.  HTML validation: W3C validator was used to do this.
     There was a number of issues highlghted initially. Errors were caused by placeholders placed on select elements and unallowed target atrbute used in anchor tags.
     I had couple of warnings relating to script elements having type attribute. I cleared all the forementined and the validation passed with no warnings.
+
+    404 page validation was added after deployment as it was not added to the project until later stages. There is a warning message regarding no header element being used, however I decided there was no need to change this as the purpose of the page is very limited and its message is clear as is.
     
 -   <details> <summary> Initial validation errors </summary>
     <img src="assets/readme-images/htmlvalerror.png">
@@ -217,8 +222,12 @@ To Deploy a project from your github repesatory, follow the steps below.
     <img src="assets/readme-images/htmlvalwarning.png">
     </details>
 
--   <details> <summary> PASSED VALIDATION </summary>
+-   <details> <summary> PASSED VALIDATION index.html </summary>
     <img src="assets/readme-images/htmlvalnoerror.png">
+    </details>
+
+-   <details> <summary> PASSED VALIDATION 404.html </summary>
+    <img src="assets/readme-images/htmlval404.png">
     </details>
 
 
@@ -229,9 +238,11 @@ To Deploy a project from your github repesatory, follow the steps below.
     </details>
 
 3. JavaScript validation: I  ran the code through https://jshint.com/ to validate my javascript. There were no errors , however high number of warnings were issued.
-    Investigating the warning I found that most relates to javascript versions and had no effect on the application so I decided not to address them. Further issue were due to missing or unneccessary semicolons, all of which had been replaced or cleared accordingly. Finally had several warning relating to unused variables. I found that these are due to accessibility by the software as the each js file were tested seperately. 
+    Investigating the warning I found that most relates to javascript versions and had no effect on the application so I decided not to address them. Further issue were due to missing or unneccessary semicolons, all of which had been replaced or cleared accordingly. Finally had several warning relating to unused variables. I found that these are due to accessibility by the software as each js file were tested seperately and no relating files were loaded in the validator.
 
     I also ran the code using JSLint. IT has highlighted other warnings such as lines longer than 80 character, undeclared 'documents' and use double quotes instead of singles. I did some research on the warnings highlighted and found that the 80 character lenght is a convention that dates back to punch cards and there is no hard limit in modern practises. I have modified some of my single line comment into doubles to decrese the warnings. I also found that single quotes warnings are highlighted because of SQL and JSON compatibility and JavaScript guideline do recommend using double quotes which also ensures consistency. I have modified my code after my findings. Finally, high number of warnings due to undeclared 'document' which was mitigated using the code /*jslint browser:true */ to enable browser enviroment.
+
+    Similarly to previous section, 404 validation here been added after deployment. There were no issues other than warnings like previous files with the causes explained above.
 
 -   <details> <summary> JSHint Quiz VALIDATION </summary>
     <img src="assets/readme-images/jsvalidationquiz.png">
@@ -243,6 +254,10 @@ To Deploy a project from your github repesatory, follow the steps below.
 
 -   <details> <summary> JSHint GetMyPlan VALIDATION </summary>
     <img src="assets/readme-images/jsvalidationgetmyplan.png">
+    </details>
+
+-   <details> <summary> JSHint 404 VALIDATION </summary>
+    <img src="assets/readme-images/jsval404.png">
     </details>
 
 -   <details> <summary> JSLint Quiz VALIDATION </summary>
@@ -257,10 +272,19 @@ To Deploy a project from your github repesatory, follow the steps below.
     <img src="assets/readme-images/getmyplanjslint.png">
     </details>
 
+-   <details> <summary> JSLint 404 VALIDATION </summary>
+    <img src="assets/readme-images/404jslint.png">
+    </details>
+
 
 ### Manual Testing <a name="alltesting"></a>
 
 #### Initial testing items below arose during development and most were dealt with at the time.  <a name="predeployment"></a>
+
+I decided to fully commit to manual testing during this project due to the following: While significant effort were made to design the project, due to it being my first JavaScript project, several changes were made during development. This would have significantly increased my efforts if I was to use automated tests and I decided this would not be time efficient. Further to the previous reason, my experience with Jest is limited to the scope covered by the course and therefore I decided it is more efficient to focus my efforts on one new language without further pressure. Finally I felt that autamated testing could not accuratelly evaluate the outlook of the application nor the user experience.
+
+Here manual testing efforts were mainly carried out with Ad-hoc testing during development to quickly identify obvious issues and rectify accordingly and re-test to ensure fix. 
+At the end of the project but before development I conducted more test to identify issues that slipped pass previous efforts. This was done in a more structured manner ,where I fully tested all functionality. 
 
 ## RESPONSIVENESS
 
@@ -390,9 +414,106 @@ To Deploy a project from your github repesatory, follow the steps below.
 
 #### At the end of the Project further testing took place to identify any shortcomings. See details below: <a name="postdeployment"></a>
 
+## RESPONSIVENESS
+
 | **Feature** | **Test Method** | **Expectation** | **Outcome** |
 |-------------|-----------------|-----------------|-------------|
-| | | | |
+| Header Responsivness | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive Layout | PASS |
+| Footer Responsiveness | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive LAyout| PASS |
+| Main Container Responsiveness | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive LAyout| PASS |
+| Body Type Quiz Responsiveness | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive LAyout| PASS |
+| Calorie Calculator Responsiveness | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive LAyout| PASS |
+| Get My Plan-Pop-up Responsiveness | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive LAyout| PASS |
+| 404 error page | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive LAyout| PASS |
+
+## Buttons functionality
+
+| **Feature** | **Test Method** | **Expectation** | **Outcome** |
+|-------------|-----------------|-----------------|-------------|
+| Navigation-Start Quiz | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page1 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page1 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page2 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page2 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page3 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page3 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page4 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page4 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page5 submit | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page5 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Result restart | Click button | Button to trigger action as expected | PASS |
+| Navigation-Calculate button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Calculate reset | Click button | Button to trigger action as expected | PASS |
+| Navigation-Get My Plan button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Pop-Up close button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Pop-up submit button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Thank you page reset | Click button | Button to trigger action as expected | PASS |
+| 404 - home button | Click button | Button to trigger action as expected | PASS |
+
+## Buttons appearence
+
+| **Feature** | **Test Method** | **Expectation** | **Outcome** |
+|-------------|-----------------|-----------------|-------------|
+| Navigation-Start Quiz | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page1 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page1 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page2 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page2 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page3 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page3 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page4 next | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page4 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page5 submit | Click button | Button to trigger action as expected | PASS |
+| Navigation-Quiz page5 prev | Click button | Button to trigger action as expected | PASS |
+| Navigation-Result restart | Click button | Button to trigger action as expected | PASS |
+| Navigation-Calculate button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Calculate reset | Click button | Button to trigger action as expected | PASS |
+| Navigation-Get My Plan button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Pop-Up close button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Pop-up submit button | Click button | Button to trigger action as expected | PASS |
+| Navigation-Thank you page reset | Click button | Button to trigger action as expected | PASS |
+| 404 - home button | Click button | Button to trigger action as expected | PASS |
+
+## Layout
+
+| **Feature** | **Test Method** | **Expectation** | **Outcome** |
+|-------------|-----------------|-----------------|-------------|
+| Layout header | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout main page/background | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Body Type Quiz start | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Body Type Quiz page 1 - 5 | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Body Type Quiz result | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Calculator start | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Calculator result | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Get My Plan start | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Get My Plan-Pop up | visual inspection | page/feature to appear as expected/designed | PASS |
+| Layout Get My Plan- Thank you pop up | visual inspection | page/feature to appear as expected/designed | PASS |
+| 404 page | visual inspection | page/feature to appear as expected/designed | PASS |
+
+## Console Errors
+
+| **Feature** | **Test Method** | **Expectation** | **Outcome** |
+|-------------|-----------------|-----------------|-------------|
+| Navigation-Start Quiz | Click button | No unexpected console message/error | PASS |
+| Navigation-Quiz page1 next | Click button | No unexpected console message/error | PASS |
+| Navigation-Quiz page1 next | Click button | No unexpected console message/error | PASS |
+| Navigation-Quiz page2 next | Click button | No unexpected console message/error | PASS |
+| Navigation-Quiz page2 prev | Click button | No unexpected console message/error | PASS |
+| Navigation-Quiz page3 next | Click button | No unexpected console message/error | PASS |
+| Navigation-Quiz page3 prev | Click button | No unexpected console message/error | PASS |
+| Navigation-Quiz page4 next | Click button | No unexpected console message/error | PASS |
+| Navigation-Quiz page4 prev | Click button | No unexpected console message/error | PASS |
+| Navigation-Quiz page5 submit | Click button | No unexpected console message/error | PASS |
+| Navigation-Quiz page5 prev | Click button | No unexpected console message/error | PASS |
+| Navigation-Result restart | Click button | No unexpected console message/error | PASS |
+| Navigation-Calculate button | Click button | No unexpected console message/error | PASS |
+| Navigation-Calculate reset | Click button | No unexpected console message/error | PASS |
+| Navigation-Get My Plan button | Click button | No unexpected console message/error | PASS |
+| Navigation-Pop-Up close button | Click button | No unexpected console message/error | PASS |
+| Navigation-Pop-up submit button | Click button | No unexpected console message/error | PASS |
+| Navigation-Thank you page reset | Click button | No unexpected console message/error | PASS |
+| 404 - home button | Click button | No unexpected console message/error | PASS |
+
 
 #### User Testing <a name="usertest"></a>
 
