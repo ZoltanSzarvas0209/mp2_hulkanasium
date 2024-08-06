@@ -1,12 +1,13 @@
+// start quiz button to trigger quiz
+const startbutton = document.getElementById("start-quiz-btn");
+// initially displayed div in quiz section
+const quizWelcome = document.getElementById("quiz-welcome");
+// initially hidden div to contain quiz
+const quiz = document.querySelector(".quiz-questions-container");
+// result div to display at the end of the quiz
+const quizResult = document.querySelector(".quiz-result-container");
 
-
-const startbutton = document.getElementById('start-quiz-btn'); // start quiz button to trigger quiz
-const quizWelcome = document.getElementById('quiz-welcome'); // initially displayed div in quiz section
-const quiz = document.querySelector('.quiz-questions-container'); // initially hidden div to contain quiz
-const quizResult = document.querySelector('.quiz-result-container'); // result div to display at the end of the quiz
-
-
-//initialise questions array, index to track questions and answers array 
+//initialise questions array, index to track questions and answers array
 
 let currentQuestionIndex = 0;
 let isQuesstionAnswered = false;
@@ -14,13 +15,13 @@ let userAnswers = [];
 const bodytypeQuiz = [
     {
         question: "How would you describe your natural body shape?",
-        choices: { A: "Naturally lean and have difficulty gaining weight.", 
+        choices: { A: "Naturally lean and have difficulty gaining weight.",
             B: "Naturally muscular and gain muscle easily.",
             C: "Naturally soft and round, and gain weight easily."}
     },
     {
         question: "How does your body respond to weight training?",
-        choices: { A: " I struggle to gain muscle mass.", 
+        choices: { A: " I struggle to gain muscle mass.",
             B: " I gain muscle mass quickly and easily.",
             C: "I gain some muscle but also tend to gain fat."}
     },
@@ -58,7 +59,7 @@ function startQuiz() {
 
 function displayQuestion(index) {
     const currentQuestion = bodytypeQuiz[index];
-    quiz.innerHTML = 
+    quiz.innerHTML =
     `<div class="question">${currentQuestion.question}</div>
     <div class="choices center">
         <button class="choice-btn btn" data-choice="A"> ${currentQuestion.choices.A}</button>
@@ -72,39 +73,37 @@ function displayQuestion(index) {
 
     // add event listeners and functionality to navigation buttons
     questionNav();
-   
     // event listeners to get userAnswer array populated with user selection.
     handleAnswers();
 }
 
-
 function questionNav() {
-    const next = document.getElementById('next-btn');
-    const prev = document.getElementById('prev-btn');
-    const nav = document.querySelector('.nav-btn');
+    const next = document.getElementById("next-btn");
+    const prev = document.getElementById("prev-btn");
+    const nav = document.querySelector(".nav-btn");
 
     //remove prev button when not needed
     if (currentQuestionIndex > 0) {
-        nav.classList.remove('hidden');
+        nav.classList.remove("hidden");
     }
 
     //remove next button when not needed
     if (currentQuestionIndex === bodytypeQuiz.length -1) {
-        next.classList.add('hidden');
+        next.classList.add("hidden");
     }
 
     // dynamically create submit button
 
     if (currentQuestionIndex === bodytypeQuiz.length -1) {
-        const navDiv = document.querySelector('.navigation');
-        const submitButton = document.createElement('button');
-        submitButton.textContent = 'SUBMIT';
-        submitButton.classList.add('selected');
-        submitButton.id = 'submit-btn';
+        const navDiv = document.querySelector(".navigation");
+        const submitButton = document.createElement("button");
+        submitButton.textContent = "SUBMIT";
+        submitButton.classList.add("selected");
+        submitButton.id = "submit-btn";
         navDiv.appendChild(submitButton);
 
         // event listener added to call submitQuiz function when button is clicked
-        submitButton.addEventListener('click', submitQuiz);
+        submitButton.addEventListener("click", submitQuiz);
     }
 
     // event listeners fpr prev/next clicks and update currentQuestionIndex variable.
@@ -126,41 +125,44 @@ function questionNav() {
 }
 
 function handleAnswers() {
-    // this code snippet was created with perplexity ai and it add event listeners to the choice-btns
-    document.querySelectorAll('.choice-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            userAnswers[currentQuestionIndex] = this.getAttribute('data-choice');
+    /* this code snippet was created with perplexity ai and
+    it adds event listeners to the choice-btns */
+    document.querySelectorAll(".choice-btn").forEach(button => {
+        button.addEventListener("click", function() {
+            userAnswers[currentQuestionIndex] = this.getAttribute("data-choice");
             highlightSelectedChoice(this);
-            document.getElementById('next-btn').classList.remove(`selected`);
+            document.getElementById("next-btn").classList.remove("selected");
         });
     });
 }
 
-
 // this function captures the choice for each question and higlights it.
 function highlightSelectedChoice(selectedButton) {
     // Remove highlight from all buttons
-    document.querySelectorAll('.choice-btn').forEach(btn => {
-        btn.classList.remove('selected');
+    document.querySelectorAll(".choice-btn").forEach(btn => {
+        btn.classList.remove("selected");
     });
     // Add highlight to selected button
-    selectedButton.classList.add('selected');
+    selectedButton.classList.add("selected");
 
     isQuesstionAnswered = true;
 
-    // submit btn higlight and hover effect( already installed in css ,however effect stopped working after this code was added and therefore I extended it to restart effect)
+    /* submit btn higlight and hover effect
+    ( already installed in css ,however effect stopped working after
+     this code was added and therefore I extended it to restart effect)
+     */
 
     if (currentQuestionIndex === 4){
-    const submitBtn = document.getElementById('submit-btn');
-    submitBtn.classList.remove('selected');
-    submitBtn.style.backgroundColor = 'rgb(138,130,110)';
+    const submitBtn = document.getElementById("submit-btn");
+    submitBtn.classList.remove("selected");
+    submitBtn.style.backgroundColor = "rgb(138,130,110)";
 
-    submitBtn.addEventListener('mouseenter', function() {
-    this.style.backgroundColor = 'rgb(179,155,106)';
+    submitBtn.addEventListener("mouseenter", function() {
+    this.style.backgroundColor = "rgb(179,155,106)";
     });
-      
-    submitBtn.addEventListener('mouseleave', function() {
-    this.style.backgroundColor = 'rgb(138,130,110)'; 
+
+    submitBtn.addEventListener("mouseleave", function() {
+    this.style.backgroundColor = "rgb(138,130,110)";
     });
     }
 
@@ -171,32 +173,33 @@ function createResult() {
     let bodyType ="";
     let description="";
 
-    // calculate how many times each letter is present in the array( userAnswers populated from quiz)
-    let countA = userAnswers.filter(answer => answer === 'A').length;
-    let countB = userAnswers.filter(answer => answer === 'B').length;
-    let countC = userAnswers.filter(answer => answer === 'C').length;
+    /* calculate how many times each letter is present in the array
+    ( userAnswers populated from quiz) */
+    let countA = userAnswers.filter(answer => answer === "A").length;
+    let countB = userAnswers.filter(answer => answer === "B").length;
+    let countC = userAnswers.filter(answer => answer === "C").length;
 
     // Add logic to determine body type
 
     if (countA >= 3) {
-        bodyType ='Ectomorph';
+        bodyType ="Ectomorph";
     } else if (countB >= 3) {
-        bodyType ='Mesomorph';
+        bodyType ="Mesomorph";
     } else if (countC >= 3) {
-        bodyType ='Endomorph';
+        bodyType ="Endomorph";
     } else if (countA === countB && countC < 2) {
-        bodyType ='Mixed: 50%/50% Ectomorph and Mesomorph';
+        bodyType ="Mixed: 50%/50% Ectomorph and Mesomorph";
     } else if (countA === countC && countB < 2) {
-        bodyType ='Mixed: 50%/50% Ectomorph and Endomorph';
+        bodyType ="Mixed: 50%/50% Ectomorph and Endomorph";
     } else if (countB === countC && countA < 2) {
-        bodyType ='Mixed: 50%/50% Endomorph and Mesomorph';
+        bodyType ="Mixed: 50%/50% Endomorph and Mesomorph";
     }
 
     // set description based on bodyType
 
-    if (bodyType === 'Ectomorph') {
+    if (bodyType === "Ectomorph") {
         description = "Ectomorphs are naturally lean and have difficulty gaining weight,both in terms of muscle and fat.They typically have a fast metabolism and a slim build with narrow shoulders and hips.";
-    } else if (bodyType === 'Mesomorph') {
+    } else if (bodyType === "Mesomorph") {
         description = "Mesomorphs have a naturally muscular physique and can gain muscle easily. They often have a more athletic build with broader shoulders, a narrower waist, and a moderate metabolism.";
     } else {
         description = "Endomorphs tend to have a softer, rounder body and gain weight easily, often in the form of both muscle and fat. They typically have a slower metabolism and may find it challenging to stay lean.";
@@ -205,26 +208,26 @@ function createResult() {
     // create html based on bodytype determined
     quizResult.innerHTML = `
     <div>
-        <p id="result-text">Based on the answers you provided, your Body Type is: ${bodyType}</p> 
+        <p id="result-text">Based on the answers you provided, your Body Type is: ${bodyType}</p>
         <img id="quiz-result-img" src="assets/images/quizresultimg.png" alt="An image of a ${bodyType} body type">
         <p id="body-description">${description}</p>
         <button class="btn" id="restart-quiz">RESTART</button>
     </div>`;
 
-    quizResult.style.display = 'block';
+    quizResult.style.display = "block";
 
     // add reset button
-    document.getElementById('restart-quiz').addEventListener("click", function() {
+    document.getElementById("restart-quiz").addEventListener("click", function() {
         currentQuestionIndex = 0;
         userAnswers = [];
         isQuesstionAnswered = false;
-        quizResult.style.display = 'none';
+        quizResult.style.display = "none";
         startQuiz();
     });
 
 }
 
 function submitQuiz() {
-    quiz.style.display = 'none';
+    quiz.style.display = "none";
     createResult();
 }

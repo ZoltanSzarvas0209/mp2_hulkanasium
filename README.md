@@ -27,8 +27,8 @@ The idea of the site similarly to my first project is based on real life experie
      - [ Wireframes ](#wireframes)
  9. [ Deployment ](#deployment)
  10. [ Testing/Bugs/Fixes ](#testing)
-     - [ HTML and CSS Validation](#htmlandcss)
-     - [ Testing ](#alltesting)
+     - [ HTML,CSS and JS Validation](#htmlandcss)
+     - [ Manual Testing ](#alltesting)
           - [ Pre-deployment ](#predeployment)
           - [ post-deployment ](#postdeployment)
      - [ User Testing ](#usertest)
@@ -57,7 +57,7 @@ The choosen project is a fictional gym webapp that mimics some features of an or
     * Gitpod
 
 
-* additional resources
+* Additional resources
 
     * Coolors: https://coolors.co/ 
     * FontAwesome: https://fontawesome.com/search?o=r&m=free&s=solid
@@ -66,8 +66,15 @@ The choosen project is a fictional gym webapp that mimics some features of an or
     * Google Fonts: https://fonts.google.com/
     * W3School: https://www.w3schools.com/
 
-### Objective <a name="objective"></a>
+* Testing
 
+    * Google Lighthouse
+    * JSHint: https://jshint.com/
+    * JSLint: https://www.jslint.com/
+    * W3C HTML Validator: https://validator.w3.org/
+    * W3C CSS Validator: https://jigsaw.w3.org/css-validator/
+
+### Objective <a name="objective"></a>
     * The objectives of the app is to promote health lifestyle and advertise the fictional gym Hulkanasium. Furthermore , the app is intended to be a tool for users to gain some general knowledge about their body type and nutrition needs.
 
 ### Research <a name="research"></a>
@@ -199,8 +206,8 @@ To Deploy a project from your github repesatory, follow the steps below.
 
 ### HTML,CSS and JS validation: <a name="htmlandcss"></a>
 
-1. HTML validation: W3C validator was used to do this.
-    There was a number of issues highlghted initially. Errors were caused by placeholders placed on <select> elements and unallowed target atrbute used in <a> tags.
+1.  HTML validation: W3C validator was used to do this.
+    There was a number of issues highlghted initially. Errors were caused by placeholders placed on select elements and unallowed target atrbute used in anchor tags.
     I had couple of warnings relating to script elements having type attribute. I cleared all the forementined and the validation passed with no warnings.
     
 -   <details> <summary> Initial validation errors </summary>
@@ -224,20 +231,34 @@ To Deploy a project from your github repesatory, follow the steps below.
 3. JavaScript validation: I  ran the code through https://jshint.com/ to validate my javascript. There were no errors , however high number of warnings were issued.
     Investigating the warning I found that most relates to javascript versions and had no effect on the application so I decided not to address them. Further issue were due to missing or unneccessary semicolons, all of which had been replaced or cleared accordingly. Finally had several warning relating to unused variables. I found that these are due to accessibility by the software as the each js file were tested seperately. 
 
--   <details> <summary> PASSED VALIDATION </summary>
+    I also ran the code using JSLint. IT has highlighted other warnings such as lines longer than 80 character, undeclared 'documents' and use double quotes instead of singles. I did some research on the warnings highlighted and found that the 80 character lenght is a convention that dates back to punch cards and there is no hard limit in modern practises. I have modified some of my single line comment into doubles to decrese the warnings. I also found that single quotes warnings are highlighted because of SQL and JSON compatibility and JavaScript guideline do recommend using double quotes which also ensures consistency. I have modified my code after my findings. Finally, high number of warnings due to undeclared 'document' which was mitigated using the code /*jslint browser:true */ to enable browser enviroment.
+
+-   <details> <summary> JSHint Quiz VALIDATION </summary>
     <img src="assets/readme-images/jsvalidationquiz.png">
     </details>
 
--   <details> <summary> PASSED VALIDATION </summary>
+-   <details> <summary> JSHint Calculator VALIDATION </summary>
     <img src="assets/readme-images/jscalculate.png">
     </details>
 
--   <details> <summary> PASSED VALIDATION </summary>
+-   <details> <summary> JSHint GetMyPlan VALIDATION </summary>
     <img src="assets/readme-images/jsvalidationgetmyplan.png">
     </details>
 
+-   <details> <summary> JSLint Quiz VALIDATION </summary>
+    <img src="assets/readme-images/quizjslint.png">
+    </details>
 
-### Testing <a name="alltesting"></a>
+-   <details> <summary> JSLint Calculator VALIDATION </summary>
+    <img src="assets/readme-images/caloriecaljslint.png">
+    </details>
+
+-   <details> <summary> JSLint GetMyPlan VALIDATION </summary>
+    <img src="assets/readme-images/getmyplanjslint.png">
+    </details>
+
+
+### Manual Testing <a name="alltesting"></a>
 
 #### Initial testing items below arose during development and most were dealt with at the time.  <a name="predeployment"></a>
 
@@ -313,6 +334,8 @@ To Deploy a project from your github repesatory, follow the steps below.
 | Layout Get My Plan-Pop up | visual inspection | page/feature to appear as expected/designed | PASS |
 | Layout Get My Plan- Thank you pop up | visual inspection | page/feature to appear as expected/designed | FAIL(6) |
 
+
+
  - Issues found during testing pre-deployment listed below:
 
  1. Quiz questions over extend when expanding onto tablet screen size( 768px) and overflow their container box. 
@@ -372,6 +395,59 @@ To Deploy a project from your github repesatory, follow the steps below.
 | | | | |
 
 #### User Testing <a name="usertest"></a>
+
+* A total of 10 friends and family members were asked to use each feature of the app.
+The following features were tested: Quiz , Calorie Calculator, Get My Plan e-mail and social links.
+
+| **Feature** | **No Users** | **Results** |
+|-------------|--------------|-------------|
+| 5 | 10 | 100% |
+
+1. The result of the testing was 100% succesful.
+2. Further feedback was taken from participant and the following was highlighted: Positioning of the pop - up form is inadequate. This was addressed and adjusted.
+
+* Testing User stories:
+
+    1. User story 1:
+
+        - As a user looking to lose weight and therefore find out nutritional needs:
+            1. I want to find out what is my daily calorie need.
+            - The user is immediatelly presented with a calorie calculator with empty fields.
+            - Easy to use self explanatory feature, with a calculate button that highlight when hovered over.
+            - Validation in place stops the user submiting the form with missing fields.
+
+            2. I want to find out how it changes based on my activity level.
+            - The form contains a dropdown menu, clearly marked as Activity level.
+            - there are 3 options here: low,moderate and high.
+            - Each time the calculate button is pressed the result is presented along with a reset button so the user can easily use the feature again.
+
+            3. I want to be able to get in touch to find out more.
+            - The get my plan section is giving the users a feature to send messages.
+
+    - <details><summary> Image for user story </summary>
+        <img src="assets/readme-images/userstory1.png">
+        </details> 
+
+    - <details><summary> Image for user story  </summary>
+        <img src="assets/readme-images/userstory1b.png">
+        </details> 
+
+    - <details><summary> Image for user story  </summary>
+        <img src="assets/readme-images/userstory1c.png">
+        </details> 
+
+    - <details><summary> Image for user story  </summary>
+        <img src="assets/readme-images/userstory1d.png">
+        </details> 
+
+    2. User story 2:
+
+        - As a gym enthusiast I am looking to gain more understanding of my body:
+            1. I want to find out my body type to understand my training needs better
+            2. I want to know my nutritional needs to help with diet
+            3. I want to improve and get a personalised workout plan
+
+
 #### Accesibility <a name="access"></a>
 
 *   Accessibility was tested with google's lighthouse tool: The initial result was lower then expected and highlighted a couple of issue.
@@ -385,6 +461,14 @@ To Deploy a project from your github repesatory, follow the steps below.
 <details><summary>Accessibility after adjustment</summary>
 <img src="assets/readme-images/accessibilityhigh.png">
 </details>
+
+
+
+* Further Lighthouse Testing Results
+<details><summary>Performance and Best Practises</summary>
+<img src="assets/readme-images/lighthousetesting.png">
+</details>
+
 
 ## Media <a name="media"></a>
 

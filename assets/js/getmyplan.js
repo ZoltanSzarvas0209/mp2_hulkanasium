@@ -1,8 +1,8 @@
 // open popup window with form
 
 document.addEventListener("DOMContentLoaded", function() {
-    const getmyplan = document.getElementById('getmyplan-btn');
-    const form = document.getElementById('form-container');
+    const getmyplan = document.getElementById("getmyplan-btn");
+    const form = document.getElementById("form-container");
 
     getmyplan.addEventListener("click", function() {
         form.style.display = "block";
@@ -12,11 +12,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // close button for pop up window
-const close = document.getElementById('close-btn');
+const close = document.getElementById("close-btn");
 
 close.addEventListener("click", function() {
     form.style.display = "none";
-    window.location.reload(); // reload window - fixed functionality issue after closing window
+    // reload window - fixed functionality issue after closing window
+    window.location.reload();
 });
 
 
@@ -42,11 +43,11 @@ function sendMail(contactForm) {
 
 // create pop up thank you div upon submiting the form
 
-document.getElementById('form').addEventListener("submit", function(event){
+document.getElementById("form").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form from submitting
 
     if (this.checkValidity()) {
-        const thankyoupage = document.getElementById('form-container');
+        const thankyoupage = document.getElementById("form-container");
         thankyoupage.innerHTML = `
         <div id="thankyoupage">
             <h1>Thank you for your enquiry!</h1>
@@ -55,8 +56,8 @@ document.getElementById('form').addEventListener("submit", function(event){
         </div>`;
 
         // Add event listener to the close button after it's created
-        document.getElementById('close').addEventListener("click", function() {
-            document.getElementById('form-container').style.display = "none";
+        document.getElementById("close").addEventListener("click", function() {
+            document.getElementById("form-container").style.display = "none";
             window.location.reload();
         });
     } else {
