@@ -402,11 +402,33 @@ footer {
   
   }
 
-  @media (min-width: 1134px) {
+@media (min-width: 1134px) {
 
-    #thankyoupage{
-      position: absolute;
-      width: 80%;
-      margin: 10% 10%;
-    }
+  #thankyoupage{
+    position: absolute;
+    width: 80%;
+    margin: 10% 10%;
   }
+}
+
+/*------------------404.html page-----------------------------*/
+
+#main-404-container {
+
+}
+
+#error-message {
+
+}
+
+#error-text1 {
+
+}
+
+#error-text2 {
+
+}
+
+#home-btn {
+  
+}
