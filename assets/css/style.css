@@ -414,21 +414,22 @@ footer {
 /*------------------404.html page-----------------------------*/
 
 #main-404-container {
-
+  min-height: 600px;
+  margin-bottom: 20px;
 }
 
 #error-message {
-
+  margin: 16px;
 }
 
 #error-text1 {
-
+  font-size: 36px;
 }
 
 #error-text2 {
-
+  font-size: 18px;
 }
 
 #home-btn {
-  
+  margin: 24px;
 }
