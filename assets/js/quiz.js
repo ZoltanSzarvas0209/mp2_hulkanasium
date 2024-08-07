@@ -207,6 +207,7 @@ function createResult() {
     }
 
     // create html based on bodytype determined
+
     quizResult.innerHTML = `
     <div>
         <p id="result-text">Based on the answers you provided, your Body Type is: ${bodyType}</p>

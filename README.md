@@ -669,8 +669,45 @@ The following features were tested: Quiz , Calorie Calculator, Get My Plan e-mai
 
         - As a gym enthusiast I am looking to gain more understanding of my body:
             1. I want to find out my body type to understand my training needs better
+            - The user is presented with a body type quiz at the top of the app
+            - Button highlight and pointer changes to crousor when hovered over to let the user know it can be clicked.
+            - A quiz is played to determine body type.
+            - Once its submitted the result is displayed to the user.
             2. I want to know my nutritional needs to help with diet
+            - Similarly to user one, a fitness enthusiast can benefit from finding out calorie needs.
+            - Calculator available as the 2nd feature of the app.
             3. I want to improve and get a personalised workout plan
+            - Get My Plan button is there to provide a platform to contact the company
+            - Pop-up form is presented, where the user can pass on the results as well as any other requirements.
+            - After the form is submitted the user is presented a confirmation page that the message was sent and will get an an answer in 48 hours.
+
+    - <details><summary> Image for user story  </summary>
+        <img src="assets/readme-images/userstory2.png">
+        </details> 
+    
+    - <details><summary> Image for user story  </summary>
+        <img src="assets/readme-images/userstory2b.png">
+        </details> 
+
+    - <details><summary> Image for user story  </summary>
+        <img src="assets/readme-images/userstory2c.png">
+        </details> 
+
+    - <details><summary> Image for user story  </summary>
+        <img src="assets/readme-images/userstory2d.png">
+        </details> 
+
+    - <details><summary> Image for user story  </summary>
+        <img src="assets/readme-images/userstory2e.png">
+        </details> 
+
+    - <details><summary> Image for user story  </summary>
+        <img src="assets/readme-images/userstory2f.png">
+        </details> 
+
+    - <details><summary> Image for user story  </summary>
+        <img src="assets/readme-images/userstory2g.png">
+        </details> 
 
 
 ## Accesibility <a name="access"></a>

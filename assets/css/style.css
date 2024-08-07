@@ -35,6 +35,7 @@
   color: white;
   border-radius: 20%;
   margin: 5px;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -123,6 +124,7 @@ h2 {
   color: white;
   border-radius: 20%;
   margin: 5px;
+  cursor: pointer;
 }
 
 #submit-btn:hover {
