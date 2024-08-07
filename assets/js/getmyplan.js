@@ -6,6 +6,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     getmyplan.addEventListener("click", function() {
         form.style.display = "block";
+
+        // hide all elements behind the form
+        document.getElementById("main-container").classList.remove("main-container");
+        document.getElementById("quiz-welcome").style.display = "none";
+        document.getElementById("quiz-questions-container").style.display = "none";
+        document.getElementById("quiz-result-container").style.display = "none";
+        document.getElementById("calorie-default").style.display = "none";
+        document.getElementById("calorie-result").style.display = "none";
+        document.getElementById("getmyplan-container").style.display = "none";
+        document.getElementById("header").style.display = "none";
+        document.getElementById("footer").style.display = "none";
     });
 
 });

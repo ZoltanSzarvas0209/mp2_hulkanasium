@@ -80,6 +80,7 @@ h2 {
   font-family: Roboto serif sans-serif;
 }
 
+
 /*---------------------------Quiz section----------------------------*/
 
 .quiz-header {
@@ -210,6 +211,8 @@ h2 {
   border-color: rgb(179,155,106);
   border-radius: 10%;
   background-color: rgb(27 26 25);
+  color: white;
+  text-align: center;
 }
 
 #thankyoupage p {
@@ -236,8 +239,10 @@ h2 {
   height: 90%;
   background-color: rgb(54,52,33, 0.96);
   border-radius: 10px;
-  padding-top: 20%;
+  padding-top: 8%;
   margin: 5%;
+  text-align: center;
+  color: white;
 }
 
 #form label {

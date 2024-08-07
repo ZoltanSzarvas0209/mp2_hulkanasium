@@ -42,7 +42,7 @@ The idea of the site similarly to my first project is based on real life experie
 The methology of UXD was used in the planning and development of the project. 
 The choosen project is a fictional gym webapp that mimics some features of an ordinary webapp along with some added features to showcase use of JavaScript within the project. 
 
-### Technologies and Tools Used <a name="technologies"></a>
+## Technologies and Tools Used <a name="technologies"></a>
 
 * Languages
 
@@ -74,10 +74,10 @@ The choosen project is a fictional gym webapp that mimics some features of an or
     * W3C HTML Validator: https://validator.w3.org/
     * W3C CSS Validator: https://jigsaw.w3.org/css-validator/
 
-### Objective <a name="objective"></a>
+## Objective <a name="objective"></a>
     * The objectives of the app is to promote health lifestyle and advertise the fictional gym Hulkanasium. Furthermore , the app is intended to be a tool for users to gain some general knowledge about their body type and nutrition needs.
 
-### Research <a name="research"></a>
+## Research <a name="research"></a>
 
 Extensive research took place before starting on the planing of the structure of the site. Visited several existing gym sites to find inspiration in design, test usability and find what is needed to fulfill user needs.
 
@@ -94,11 +94,11 @@ Websites visited for research:
 * [Bodybuilding](https://www.bodybuilding.com/fun/macronutcal.htm)
 
 
-### Target Audience <a name="audience"></a>
+## Target Audience <a name="audience"></a>
 
 The target audiance of the application is very broad. IT aims to help all looking to get fitter with the first steps. wether it is commiting to a plan or just starting to watch what you eat. Generally it includes people looking to lose weight as well as fitness enthusiasts looking to gain muscle. The app also helpful to anyone that just wants to find out the "numbers" and be more aware of their eating habbits.
 
-### User Stories <a name="user"></a>
+## User Stories <a name="user"></a>
 
 * User story 1:
 
@@ -114,7 +114,7 @@ The target audiance of the application is very broad. IT aims to help all lookin
         2. I want to know my nutritional needs to help with diet
         3. I want to improve and get a personalised workout plan
 
-### Structure and Design <a name="design"></a>
+## Structure and Design <a name="design"></a>
 
 
 ## Layout: <a name="layout"></a>
@@ -190,7 +190,7 @@ The original wireframes had a slightly different lay out then the final product.
 
 
 
-### Deployment <a name="deployment"></a>
+## Deployment <a name="deployment"></a>
 
 To Deploy a project from your github repesatory, follow the steps below.
 
@@ -207,7 +207,7 @@ To Deploy a project from your github repesatory, follow the steps below.
 
 ## Testing/Bugs/Fixes <a name="testing"></a>
 
-### HTML,CSS and JS validation: <a name="htmlandcss"></a>
+## HTML,CSS and JS validation: <a name="htmlandcss"></a>
 
 1.  HTML validation: W3C validator was used to do this.
     There was a number of issues highlghted initially. Errors were caused by placeholders placed on select elements and unallowed target atrbute used in anchor tags.
@@ -277,16 +277,36 @@ To Deploy a project from your github repesatory, follow the steps below.
     </details>
 
 
-### Manual Testing <a name="alltesting"></a>
+* After further investigation and the support of my Mentor I discovered that configurations in JSHint can be changed to support newer versions. Re-running the validator has cleared all but 1 warnings.
 
-#### Initial testing items below arose during development and most were dealt with at the time.  <a name="predeployment"></a>
+-   <details> <summary> JSHint 404 VALIDATION ES6 </summary>
+    <img src="assets/readme-images/404nowarningsjshint.png">
+    </details>
+
+-   <details> <summary> JSHint Calculator VALIDATION ES6</summary>
+    <img src="assets/readme-images/calculatornowarningsjshint.png">
+    </details>
+
+-   <details> <summary> JSHint GetMyPlan VALIDATION ES6 </summary>
+    <img src="assets/readme-images/getmyplannowarningsjshint.png">
+    </details>
+
+-   <details> <summary> JSHint Quiz VALIDATION ES6 </summary>
+    <img src="assets/readme-images/quiznowarningsjshint.png">
+    </details>
+
+## Manual Testing <a name="alltesting"></a>
+
+### Initial testing items below arose during development and most were dealt with at the time.  <a name="predeployment"></a>
 
 I decided to fully commit to manual testing during this project due to the following: While significant effort were made to design the project, due to it being my first JavaScript project, several changes were made during development. This would have significantly increased my efforts if I was to use automated tests and I decided this would not be time efficient. Further to the previous reason, my experience with Jest is limited to the scope covered by the course and therefore I decided it is more efficient to focus my efforts on one new language without further pressure. Finally I felt that autamated testing could not accuratelly evaluate the outlook of the application nor the user experience.
 
 Here manual testing efforts were mainly carried out with Ad-hoc testing during development to quickly identify obvious issues and rectify accordingly and re-test to ensure fix. 
 At the end of the project but before development I conducted more test to identify issues that slipped pass previous efforts. This was done in a more structured manner ,where I fully tested all functionality. 
 
-## RESPONSIVENESS
+### RESPONSIVENESS
+
+<details>
 
 | **Feature** | **Test Method** | **Expectation** | **Outcome** |
 |-------------|-----------------|-----------------|-------------|
@@ -297,7 +317,11 @@ At the end of the project but before development I conducted more test to identi
 | Calorie Calculator Responsiveness | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive LAyout| PASS |
 | Get My Plan-Pop-up Responsiveness | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive LAyout| PASS |
 
-## Buttons functionality
+</details>
+
+### Buttons functionality
+
+<details>
 
 | **Feature** | **Test Method** | **Expectation** | **Outcome** |
 |-------------|-----------------|-----------------|-------------|
@@ -320,7 +344,11 @@ At the end of the project but before development I conducted more test to identi
 | Navigation-Pop-up submit button | Click button | Button to trigger action as expected | PASS |
 | Navigation-Thank you page reset | Click button | Button to trigger action as expected | PASS |
 
-## Buttons appearence
+</details>
+
+### Buttons appearence
+
+<details>
 
 | **Feature** | **Test Method** | **Expectation** | **Outcome** |
 |-------------|-----------------|-----------------|-------------|
@@ -343,7 +371,11 @@ At the end of the project but before development I conducted more test to identi
 | Navigation-Pop-up submit button | Click button | Button to trigger action as expected | PASS |
 | Navigation-Thank you page reset | Click button | Button to trigger action as expected | PASS |
 
-## Layout
+</details>
+
+### Layout
+
+<details>
 
 | **Feature** | **Test Method** | **Expectation** | **Outcome** |
 |-------------|-----------------|-----------------|-------------|
@@ -358,9 +390,11 @@ At the end of the project but before development I conducted more test to identi
 | Layout Get My Plan-Pop up | visual inspection | page/feature to appear as expected/designed | PASS |
 | Layout Get My Plan- Thank you pop up | visual inspection | page/feature to appear as expected/designed | FAIL(6) |
 
+</details>
 
+## Issues found during testing pre-deployment listed below:
 
- - Issues found during testing pre-deployment listed below:
+<details>
 
  1. Quiz questions over extend when expanding onto tablet screen size( 768px) and overflow their container box. 
     - Investigating the issue with the help of Developer Tools I found that the media queries originally written to avoid this problem were insufficient.   
@@ -412,9 +446,13 @@ At the end of the project but before development I conducted more test to identi
     <img src="assets/readme-images/predepissue7.png">
     </details>   
 
-#### At the end of the Project further testing took place to identify any shortcomings. See details below: <a name="postdeployment"></a>
+</details>
 
-## RESPONSIVENESS
+## At the end of the Project further testing took place to identify any shortcomings. See details below: <a name="postdeployment"></a>
+
+### RESPONSIVENESS
+
+<details>
 
 | **Feature** | **Test Method** | **Expectation** | **Outcome** |
 |-------------|-----------------|-----------------|-------------|
@@ -426,7 +464,11 @@ At the end of the project but before development I conducted more test to identi
 | Get My Plan-Pop-up Responsiveness | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive LAyout| PASS |
 | 404 error page | Developer Tools: 320px/375px/425px/768px/1024px/1440px | Fully Responsive LAyout| PASS |
 
-## Buttons functionality
+</details>
+
+### Buttons functionality
+
+<details>
 
 | **Feature** | **Test Method** | **Expectation** | **Outcome** |
 |-------------|-----------------|-----------------|-------------|
@@ -450,7 +492,11 @@ At the end of the project but before development I conducted more test to identi
 | Navigation-Thank you page reset | Click button | Button to trigger action as expected | PASS |
 | 404 - home button | Click button | Button to trigger action as expected | PASS |
 
-## Buttons appearence
+</details>
+
+### Buttons appearence
+
+<details>
 
 | **Feature** | **Test Method** | **Expectation** | **Outcome** |
 |-------------|-----------------|-----------------|-------------|
@@ -474,7 +520,11 @@ At the end of the project but before development I conducted more test to identi
 | Navigation-Thank you page reset | Click button | Button to trigger action as expected | PASS |
 | 404 - home button | Click button | Button to trigger action as expected | PASS |
 
-## Layout
+</details>
+
+### Layout
+
+<details>
 
 | **Feature** | **Test Method** | **Expectation** | **Outcome** |
 |-------------|-----------------|-----------------|-------------|
@@ -490,7 +540,11 @@ At the end of the project but before development I conducted more test to identi
 | Layout Get My Plan- Thank you pop up | visual inspection | page/feature to appear as expected/designed | PASS |
 | 404 page | visual inspection | page/feature to appear as expected/designed | PASS |
 
-## Console Errors
+</details>
+
+### Console Errors
+
+<details>
 
 | **Feature** | **Test Method** | **Expectation** | **Outcome** |
 |-------------|-----------------|-----------------|-------------|
@@ -514,8 +568,24 @@ At the end of the project but before development I conducted more test to identi
 | Navigation-Thank you page reset | Click button | No unexpected console message/error | PASS |
 | 404 - home button | Click button | No unexpected console message/error | PASS |
 
+</details>
 
-#### User Testing <a name="usertest"></a>
+### Form Validation testing
+
+<details>
+
+| **Feature** | **Test Method** | **Expectation** | **Outcome** |
+|-------------|-----------------|-----------------|-------------|
+| Calculator WEIGHT field | Enter invalid input:A b c D e | No input allowed, can't type it in | PASS |
+| Calculator HEIGHT field | Enter invalid input:F g H i J | No input allowed, can't type it in | PASS |
+| Calculator AGE field | Enter invalid input:K l M n O | No input allowed, can't type it in | PASS |
+| GetMyPlan Pop Up Form First Name | Enter invalid input: 123 | Warning to enter requested format | PASS |
+| GetMyPlan Pop Up Form Last Name | Enter invalid input: 123 | Warning to enter requested format | PASS |
+| GetMyPlan Pop Up Form Email | Enter invalid input: email | Warning to enter requested format, include a @ | PASS |
+
+</details>
+
+## User Testing <a name="usertest"></a>
 
 * A total of 10 friends and family members were asked to use each feature of the app.
 The following features were tested: Quiz , Calorie Calculator, Get My Plan e-mail and social links.
@@ -569,7 +639,7 @@ The following features were tested: Quiz , Calorie Calculator, Get My Plan e-mai
             3. I want to improve and get a personalised workout plan
 
 
-#### Accesibility <a name="access"></a>
+## Accesibility <a name="access"></a>
 
 *   Accessibility was tested with google's lighthouse tool: The initial result was lower then expected and highlighted a couple of issue.
 1. no label elements were added to associated select fields, this was rectified and the label fields were also added to all input fields in the calorie calculator to maintain a consistent look.
