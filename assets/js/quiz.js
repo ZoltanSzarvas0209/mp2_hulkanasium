@@ -137,6 +137,7 @@ function handleAnswers() {
 }
 
 // this function captures the choice for each question and higlights it.
+// the base of this function was created with the assist of perplexity ai then modified and extended to accomodate the app.
 function highlightSelectedChoice(selectedButton) {
     // Remove highlight from all buttons
     document.querySelectorAll(".choice-btn").forEach(btn => {

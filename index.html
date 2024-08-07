@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <title>Hulkanasium Fitness App</title>
 
+    <!-- script for EmailJS-->
     <script
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -38,7 +39,6 @@
         <!-- Quiz container to display the result of the quiz -->
         <div class="quiz-result-container hidden" id="quiz-result-container"></div>
 
-
         <!-- Calorie calculator section  container -->
         <div class="calorie-calculator-container" id="calorie-default">
             <h3 class="quiz-header">What're My Nutritional Needs?</h3>
@@ -64,13 +64,13 @@
                 <button class="btn" id="calculate-btn" type="submit">CALCULATE</button>
             </form>
         </div>
-        <!-- Container to display the result od the calorie calculator -->
+
+        <!-- Container to display the result of the calorie calculator -->
         <div class="calorie-result-container hidden" id="calorie-result">
             <p>Your daily calorie needs to maintain your current body weight is:</p>
             <div id="calorie-value"></div>
             <button class="btn" id="reset-btn">RESET</button>
         </div>
-
 
         <!--Get my plan section container -->
         <div class="getmyplan-container" id="getmyplan-container">
@@ -78,7 +78,7 @@
             <p> Complete the Activities above, fill in the form and get your personalised workout plan or just simply ask your questions</p>
             <button class="btn" id="getmyplan-btn">GET MY PLAN</button>
         </div>
-        <!-- Pop up form to fill in when user clciks GET MY PLAN Button-->
+        <!-- Pop up form to fill in when user clicks GET MY PLAN Button-->
         <div class="form-container hidden" id="form-container">
             <form id="form" onsubmit="return sendMail(this);">
                 <label for="fname">First Name</label>
@@ -88,7 +88,7 @@
                 <input id="lname" class="form-input" type="text" name="lname" pattern="[A-Za-z\s]+" title="Type your last name here" required>
     
                 <label for="email">Email Address</label>
-                <input id="email" class="form-input" type="email" name="email" value="email" required>
+                <input id="email" class="form-input" type="email" name="email" required>
     
                 <label for="textarea">Additional Info</label>
                 <textarea id="textarea" name="textarea" placeholder="Let us know any diet and exercise preferences and whether at home or in a gym."></textarea>
@@ -99,7 +99,6 @@
             </form>
         </div>
     
-
     </section>
 
     <footer class="center" id="footer">

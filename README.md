@@ -585,6 +585,40 @@ At the end of the project but before development I conducted more test to identi
 
 </details>
 
+### Browser Testing
+
+<details>
+
+| **Feature** | **Test Method** | **Expectation** | **Outcome** |
+|-------------|-----------------|-----------------|-------------|
+| Google Chrome | non scripted test of features on desktop | full functionality and compatibility with browser | PASS |
+| Google Chrome | non scripted test of features on mobile | full functionality and compatibility with browser | FAIL(1) |
+| Microsoft Edge | non scripted test of features on desktop | full functionality and compatibility with browser | PASS |
+| Microsoft Edge | non scripted test of features on mobile | full functionality and compatibility with browser | FAIL(2) |
+| Samsung Internet | non scripted test of features on mobile | full functionality and compatibility with browser | FAIL(3) |
+
+- Issues Found: All FAIL( 1,2,3) refers to the same issue. The pop-up form at the get my plan section appears at the top of the page and can't be fully seen.
+
+    - Solution: I implemented a new feature , where the background features completly dispappear , leaving only the form to be seen for the user. This has decreased the unneccesary lenght of the app on mobile devices when the form is active. IT also increased the overall user experience as no background distractions are present.
+    Below is the modified code used to rectify the issue:
+
+        getmyplan.addEventListener("click", function() {
+        form.style.display = "block";
+
+        // hide all elements behind the form
+        document.getElementById("main-container").classList.remove("main-container");
+        document.getElementById("quiz-welcome").style.display = "none";
+        document.getElementById("quiz-questions-container").style.display = "none";
+        document.getElementById("quiz-result-container").style.display = "none";
+        document.getElementById("calorie-default").style.display = "none";
+        document.getElementById("calorie-result").style.display = "none";
+        document.getElementById("getmyplan-container").style.display = "none";
+        document.getElementById("header").style.display = "none";
+        document.getElementById("footer").style.display = "none";
+    });
+
+</details>
+
 ## User Testing <a name="usertest"></a>
 
 * A total of 10 friends and family members were asked to use each feature of the app.
@@ -669,9 +703,10 @@ The following features were tested: Quiz , Calorie Calculator, Get My Plan e-mai
 - https://pixabay.com/vectors/three-d-3d-abstract-art-male-1781596/
 
 
-
-
 ## Credits <a name="credit"></a>
+
+All credits are noted in comments in the code files.
+No dependencies were purely re-used and they were all modified and extended to support this app.
 
 ## Acknowledgement
 
